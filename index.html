@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawan Builders and Developers | Premium Real Estate in Tirupati</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="images/Logo.webp" alt="Pawan Builders and Developers Logo" class="logo">
+                <span class="brand-text">Pawan Builders and Developers</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <!-- Hero Background Slider -->
+        <div class="hero-slider">
+            <div class="slide active" style="background-image: url('images/slide1.webp');"></div>
+            <div class="slide" style="background-image: url('images/slide2.webp');"></div>
+            <div class="slide" style="background-image: url('images/slide3.webp');"></div>
+            <div class="slide" style="background-image: url('images/slide4.webp');"></div>
+            <div class="slide" style="background-image: url('images/slide5.webp');"></div>
+            <div class="slide" style="background-image: url('images/slide6.webp');"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Building Dreams,<br>Crafting Excellence</h1>
+            <p class="hero-subtitle">Premium Real Estate & Construction in Tirupati, Andhra Pradesh</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+        <!-- Slider Dots -->
+        <div class="slider-dots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+            <span class="dot" data-index="3"></span>
+            <span class="dot" data-index="4"></span>
+            <span class="dot" data-index="5"></span>
+        </div>
+        <div class="hero-scroll">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Us</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Pawan Builders and Developers</h3>
+                    <p>A premium real estate and construction company based in Tirupati, Andhra Pradesh. We specialize in residential, commercial, and luxury infrastructure projects with a focus on quality, innovation, trust, and modern architecture.</p>
+                    <p>Our mission is to build world-class developments that combine durability, elegance, and customer satisfaction. Every project we undertake reflects our commitment to excellence and our passion for creating spaces that inspire.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-award"></i>
+                            <span>Premium Quality</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Innovation</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-handshake"></i>
+                            <span>Trust & Integrity</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-building"></i>
+                            <span>Modern Architecture</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- About Carousel (Moved Here) -->
+                <div class="about-carousel">
+                    <div class="carousel-container">
+                        <button class="carousel-btn prev-btn" aria-label="Previous Slide">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        
+                        <div class="carousel-track-container">
+                            <div class="carousel-track">
+                                <!-- Slide 1 -->
+                                <div class="carousel-slide active">
+                                    <img src="carousels/carousel1.webp" alt="Modern Residential Exterior">
+                                    <div class="slide-caption">
+                                        <h3>Modern Residential Masterpiece</h3>
+                                    </div>
+                                </div>
+                                <!-- Slide 2 -->
+                                <div class="carousel-slide">
+                                    <img src="carousels/carousel2.webp" alt="Contemporary Villa Design">
+                                    <div class="slide-caption">
+                                        <h3>Contemporary Villa Design</h3>
+                                    </div>
+                                </div>
+                                <!-- Slide 3 -->
+                                <div class="carousel-slide">
+                                    <img src="carousels/carousel3.webp" alt="Luxury High-Rise Entrance">
+                                    <div class="slide-caption">
+                                        <h3>Luxury High-Rise Entrance</h3>
+                                    </div>
+                                </div>
+                                <!-- Slide 4 -->
+                                <div class="carousel-slide">
+                                    <img src="carousels/carousel4.webp" alt="Premium Commercial Development">
+                                    <div class="slide-caption">
+                                        <h3>Premium Commercial Plaza</h3>
+                                    </div>
+                                </div>
+                                <!-- Slide 5 -->
+                                <div class="carousel-slide">
+                                    <img src="carousels/carousel5.webp" alt="Exquisite Interior Concepts">
+                                    <div class="slide-caption">
+                                        <h3>Exquisite Interior Styling</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="carousel-btn next-btn" aria-label="Next Slide">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Indicators -->
+                    <div class="carousel-indicators">
+                        <span class="indicator-dot active" data-slide="0"></span>
+                        <span class="indicator-dot" data-slide="1"></span>
+                        <span class="indicator-dot" data-slide="2"></span>
+                        <span class="indicator-dot" data-slide="3"></span>
+                        <span class="indicator-dot" data-slide="4"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Statistics Row (Moved below the grid) -->
+            <div class="about-stats-row">
+                <div class="stat">
+                    <h3 class="stat-number" data-target="150">0</h3>
+                    <p class="stat-label">Projects Completed</p>
+                </div>
+                <div class="stat">
+                    <h3 class="stat-number" data-target="500">0</h3>
+                    <p class="stat-label">Happy Clients</p>
+                </div>
+                <div class="stat">
+                    <h3 class="stat-number" data-target="15">0</h3>
+                    <p class="stat-label">Years Experience</p>
+                </div>
+                <div class="stat">
+                    <h3 class="stat-number" data-target="100">0</h3>
+                    <p class="stat-label">Team Members</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Residential Construction</h3>
+                    <p>Building dream homes with modern designs, premium materials, and attention to every detail for comfortable living.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-city"></i>
+                    </div>
+                    <h3>Commercial Projects</h3>
+                    <p>Creating state-of-the-art commercial spaces that enhance business operations and reflect corporate excellence.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Luxury Infrastructure</h3>
+                    <p>Delivering premium luxury developments with world-class amenities and sophisticated architectural designs.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-drafting-compass"></i>
+                    </div>
+                    <h3>Architectural Design</h3>
+                    <p>Innovative architectural solutions that blend aesthetics with functionality for stunning results.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Renovation & Remodeling</h3>
+                    <p>Transforming existing spaces into modern, functional environments while preserving character.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3>Real Estate Development</h3>
+                    <p>Comprehensive development services from land acquisition to project completion and handover.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/F1.webp" alt="Elite Bedroom Interior">
+                    </div>
+                    <div class="project-info">
+                        <h3>Elite Bedroom Interior</h3>
+                        <p>Custom bedroom interior with designer wood paneling and ambient LED lighting.</p>
+                        <span class="project-tag">Interior</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/F2.webp" alt="Luxury Lounge & TV Unit">
+                    </div>
+                    <div class="project-info">
+                        <h3>Luxury Living Lounge</h3>
+                        <p>Premium living and dining space featuring marble floors and a backlit TV console.</p>
+                        <span class="project-tag">Interior</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/F3.webp" alt="Grand Master Suite">
+                    </div>
+                    <div class="project-info">
+                        <h3>Grand Master Suite</h3>
+                        <p>Elegant master bedroom showcasing geometric false ceiling architecture and marble tiling.</p>
+                        <span class="project-tag">Luxury</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/F4.webp" alt="Star Ceiling Design">
+                    </div>
+                    <div class="project-info">
+                        <h3>Star Ceiling Design</h3>
+                        <p>Sophisticated star-pattern false ceiling with integrated warm LED light channels.</p>
+                        <span class="project-tag">Design</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/F5.webp" alt="Blue Haven Residency">
+                    </div>
+                    <div class="project-info">
+                        <h3>Blue Haven Residency</h3>
+                        <p>Premium multi-story residential building with neoclassical columns and glass balconies.</p>
+                        <span class="project-tag">Residential</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/F6.webp" alt="Tirupati Heights Apartment">
+                    </div>
+                    <div class="project-info">
+                        <h3>Tirupati Heights</h3>
+                        <p>Modern multi-family apartment building with secure gated access and premium facade detailing.</p>
+                        <span class="project-tag">Infrastructure</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to build something remarkable?</h2>
+                <p>Get a free consultation and design walkthrough with our expert team.</p>
+                <a href="#contact" class="btn btn-primary">Book Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial active">
+                    <p class="quote">"Pawan Builders and Developers turned our dream home into reality. Exceptional quality and attention to detail."</p>
+                    <div class="client">— S. Reddy, Homeowner</div>
+                </div>
+                <div class="testimonial">
+                    <p class="quote">"Professional team, timely delivery and excellent communication throughout the project."</p>
+                    <div class="client">— A. Kumar, Commercial Client</div>
+                </div>
+                <div class="testimonial">
+                    <p class="quote">"Their design sensibilities and project management are top-notch. Highly recommended."</p>
+                    <div class="client">— M. Sharma, Investor</div>
+                </div>
+            </div>
+            <!-- Testimonial Dots -->
+            <div class="testimonial-dots">
+                <span class="testimonial-dot active" data-index="0"></span>
+                <span class="testimonial-dot" data-index="1"></span>
+                <span class="testimonial-dot" data-index="2"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Process / Timeline -->
+    <section class="process" id="process">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Process</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="step">1</div>
+                    <h4>Consultation</h4>
+                    <p>Free initial consultation and site visit to understand your needs.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="step">2</div>
+                    <h4>Design & Planning</h4>
+                    <p>Architectural design, 3D renders and cost estimation.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="step">3</div>
+                    <h4>Construction</h4>
+                    <p>Quality-focused construction with weekly progress updates.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="step">4</div>
+                    <h4>Handover</h4>
+                    <p>Final inspection, handover and aftercare support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team" id="team">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Meet Our Founder</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="team-grid">
+                <div class="founder-card">
+                    <div class="founder-image-wrapper">
+                        <img src="images/Team.webp" alt="Mr. Pawan">
+                    </div>
+                    <div class="founder-info">
+                        <h4>Mr. Pawan</h4>
+                        <p class="role">Founder & CEO</p>
+                        <p class="bio">With over 15 years of industry-leading experience, Mr. Pawan has guided Pawan Builders and Developers to become Tirupati's most trusted name in premium real estate, residential masterpieces, and commercial development.</p>
+                        <div class="founder-social">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://wa.me/919966100241" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contact Us</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Pawan Builders and Developers</h3>
+                    <p>Ready to build your dream project? Contact us today for a consultation.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Address</h4>
+                                <p>H.no 7-220/3 Subbiah Colony, Avilala, Tirupati, Pin no-517507</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p><a href="tel:+919966100241">+91 9966100241</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p><a href="mailto:Contact@pawanbuilders.com">Contact@pawanbuilders.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-globe"></i>
+                            <div>
+                                <h4>Website</h4>
+                                <p><a href="https://www.pawanbuilders.com" target="_blank">www.pawanbuilders.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Your Phone">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/Logo.webp" alt="Pawan Builders and Developers Logo" class="footer-logo">
+                    <p>Building world-class developments with durability, elegance, and customer satisfaction.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Residential Construction</a></li>
+                        <li><a href="#">Commercial Projects</a></li>
+                        <li><a href="#">Luxury Infrastructure</a></li>
+                        <li><a href="#">Architectural Design</a></li>
+                        <li><a href="#">Renovation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Working Hours</h4>
+                    <ul>
+                        <li>Monday - Friday: 9:00 AM - 6:00 PM</li>
+                        <li>Saturday: 9:00 AM - 2:00 PM</li>
+                        <li>Sunday: Closed</li>
+                    </ul>
+                </div>
+                <div class="footer-map">
+                    <h4>Our Location</h4>
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps?q=H.no%207-220%2F3%20Subbiah%20Colony%2C%20Avilala%2C%20Tirupati%2C%20517507&output=embed" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Pawan Builders and Developers. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating 3D Building Hologram -->
+    <div class="floating-3d-card">
+        <div class="floating-3d-container">
+            <div class="floating-grid-base"></div>
+            <div class="floating-laser-line"></div>
+            <model-viewer 
+                class="floating-3d-model"
+                src="asia_building.glb" 
+                alt="3D Asia Building Model" 
+                auto-rotate 
+                rotation-interval="2000"
+                interaction-prompt="none"
+                disable-zoom
+                disable-pan
+                shadow-intensity="1"
+                camera-controls
+                touch-action="pan-y">
+            </model-viewer>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
