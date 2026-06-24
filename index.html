@@ -1,40 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="classic-navy">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pawan Builders and Developers | Premium Real Estate in Tirupati</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Pawan Builders & Developers | Premium Real Estate in Tirupati</title>
+    <meta name="description" content="Pawan Builders & Developers — Tirupati's most trusted premium real estate and construction company. Residential, commercial, and luxury infrastructure projects built with excellence.">
+    <meta name="keywords" content="Pawan Builders, Tirupati real estate, construction Tirupati, luxury apartments, premium homes Andhra Pradesh">
+    <meta property="og:title" content="Pawan Builders & Developers | Premium Real Estate in Tirupati">
+    <meta property="og:description" content="Building dreams, crafting excellence — premium real estate in Tirupati.">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- 3D Model Viewer -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
+
+    <!-- ── SCROLL PROGRESS BAR ── -->
+    <div id="scrollProgress"></div>
+
+    <!-- ── PRELOADER ── -->
+    <div id="preloader">
+        <img src="images/Logo.webp" alt="Pawan Builders Logo" class="preloader-logo">
+        <div class="preloader-bar-wrap">
+            <div class="preloader-bar"></div>
+        </div>
+        <p class="preloader-text">Pawan Builders &amp; Developers</p>
+    </div>
+
+    <!-- ── NAVIGATION ── -->
     <nav class="navbar" id="navbar">
         <div class="container">
             <div class="nav-brand">
                 <img src="images/Logo.webp" alt="Pawan Builders and Developers Logo" class="logo">
-                <span class="brand-text">Pawan Builders and Developers</span>
+                <span class="brand-text">Pawan Builders</span>
             </div>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+
+            <div class="nav-right">
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+                <!-- Theme Toggle Button -->
+                <button class="theme-toggle-btn" id="themeToggleBtn" title="Change Theme" aria-label="Change color theme">
+                    <i class="fas fa-palette"></i>
+                </button>
+
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Theme Panel -->
+    <div class="theme-panel" id="themePanel" role="dialog" aria-label="Theme Selector">
+        <p class="theme-panel-title">Choose Theme</p>
+        <div class="theme-options">
+            <div class="theme-option active" data-theme="classic-navy" id="theme-classic-navy" role="button" tabindex="0" aria-label="Classic Navy theme">
+                <span class="theme-swatch"></span>
+                <span class="theme-option-name">Classic Navy</span>
+            </div>
+            <div class="theme-option" data-theme="obsidian-gold" id="theme-obsidian-gold" role="button" tabindex="0" aria-label="Obsidian Gold theme">
+                <span class="theme-swatch"></span>
+                <span class="theme-option-name">Obsidian Gold</span>
+            </div>
+            <div class="theme-option" data-theme="royal-sapphire" id="theme-royal-sapphire" role="button" tabindex="0" aria-label="Royal Sapphire theme">
+                <span class="theme-swatch"></span>
+                <span class="theme-option-name">Royal Sapphire</span>
+            </div>
+            <div class="theme-option" data-theme="emerald-elite" id="theme-emerald-elite" role="button" tabindex="0" aria-label="Emerald Elite theme">
+                <span class="theme-swatch"></span>
+                <span class="theme-option-name">Emerald Elite</span>
+            </div>
+            <div class="theme-option" data-theme="crimson-empire" id="theme-crimson-empire" role="button" tabindex="0" aria-label="Crimson Empire theme">
+                <span class="theme-swatch"></span>
+                <span class="theme-option-name">Crimson Empire</span>
+            </div>
+            <div class="theme-option" data-theme="midnight-violet" id="theme-midnight-violet" role="button" tabindex="0" aria-label="Midnight Violet theme">
+                <span class="theme-swatch"></span>
+                <span class="theme-option-name">Midnight Violet</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── HERO SECTION ── -->
     <section class="hero" id="home">
-        <!-- Hero Background Slider -->
+        <!-- Particle Canvas -->
+        <canvas id="particleCanvas"></canvas>
+
+        <!-- Background Slider -->
         <div class="hero-slider">
             <div class="slide active" style="background-image: url('images/slide1.webp');"></div>
             <div class="slide" style="background-image: url('images/slide2.webp');"></div>
@@ -43,15 +114,25 @@
             <div class="slide" style="background-image: url('images/slide5.webp');"></div>
             <div class="slide" style="background-image: url('images/slide6.webp');"></div>
         </div>
+
         <div class="hero-overlay"></div>
+        <div class="hero-vignette"></div>
+
         <div class="hero-content">
-            <h1 class="hero-title">Building Dreams,<br>Crafting Excellence</h1>
-            <p class="hero-subtitle">Premium Real Estate & Construction in Tirupati, Andhra Pradesh</p>
+            <p class="hero-eyebrow">Premier Construction Company</p>
+            <h1 class="hero-title" id="heroTitle">
+                <span class="word"><span>Building</span></span>&nbsp;
+                <span class="word"><span class="accent-word">Dreams,</span></span><br>
+                <span class="word"><span>Crafting</span></span>&nbsp;
+                <span class="word"><span class="accent-word">Excellence</span></span>
+            </h1>
+            <p class="hero-subtitle">Premium Real Estate &amp; Construction in Tirupati, Andhra Pradesh</p>
             <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                <a href="#projects" class="btn btn-primary" id="heroViewProjects">View Projects</a>
+                <a href="#contact" class="btn btn-secondary" id="heroGetInTouch">Get In Touch</a>
             </div>
         </div>
+
         <!-- Slider Dots -->
         <div class="slider-dots">
             <span class="dot active" data-index="0"></span>
@@ -61,21 +142,46 @@
             <span class="dot" data-index="4"></span>
             <span class="dot" data-index="5"></span>
         </div>
-        <div class="hero-scroll">
+
+        <div class="hero-scroll" aria-hidden="true">
             <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- ── AWARDS TICKER ── -->
+    <div class="awards-ticker" aria-hidden="true">
+        <div class="ticker-track" id="tickerTrack">
+            
+            <div class="ticker-item"><i class="fas fa-star"></i> 500+ Happy Families</div>
+            
+            <div class="ticker-item"><i class="fas fa-medal"></i> 15+ Years of Excellence</div>
+            <div class="ticker-item"><i class="fas fa-building"></i> 150+ Projects Delivered</div>
+            
+            <div class="ticker-item"><i class="fas fa-gem"></i> Luxury Living Redefined</div>
+            <div class="ticker-item"><i class="fas fa-award"></i> Quality &amp; Innovation</div>
+            <!-- Duplicate for seamless loop -->
+            
+            <div class="ticker-item"><i class="fas fa-star"></i> 500+ Happy Families</div>
+            
+            <div class="ticker-item"><i class="fas fa-medal"></i> 15+ Years of Excellence</div>
+            <div class="ticker-item"><i class="fas fa-building"></i> 150+ Projects Delivered</div>
+            
+            <div class="ticker-item"><i class="fas fa-gem"></i> Luxury Living Redefined</div>
+            <div class="ticker-item"><i class="fas fa-award"></i> Quality &amp; Innovation</div>
+        </div>
+    </div>
+
+    <!-- ── ABOUT SECTION ── -->
     <section class="about" id="about">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About Us</h2>
-                <div class="section-divider"></div>
+            <div class="section-header reveal">
+                <span class="section-eyebrow">Our Story</span>
+                <h2 class="section-title">About Pawan Builders</h2>
+                <div class="section-divider"><div class="section-divider-gem"></div></div>
             </div>
             <div class="about-content">
-                <div class="about-text">
-                    <h3>Pawan Builders and Developers</h3>
+                <div class="about-text reveal-left">
+                    <h3>Pawan Builders &amp; Developers</h3>
                     <p>A premium real estate and construction company based in Tirupati, Andhra Pradesh. We specialize in residential, commercial, and luxury infrastructure projects with a focus on quality, innovation, trust, and modern architecture.</p>
                     <p>Our mission is to build world-class developments that combine durability, elegance, and customer satisfaction. Every project we undertake reflects our commitment to excellence and our passion for creating spaces that inspire.</p>
                     <div class="about-features">
@@ -89,7 +195,7 @@
                         </div>
                         <div class="feature">
                             <i class="fas fa-handshake"></i>
-                            <span>Trust & Integrity</span>
+                            <span>Trust &amp; Integrity</span>
                         </div>
                         <div class="feature">
                             <i class="fas fa-building"></i>
@@ -97,59 +203,41 @@
                         </div>
                     </div>
                 </div>
-                <!-- About Carousel (Moved Here) -->
-                <div class="about-carousel">
+
+                <!-- About Carousel -->
+                <div class="about-carousel reveal-right">
                     <div class="carousel-container">
                         <button class="carousel-btn prev-btn" aria-label="Previous Slide">
                             <i class="fas fa-chevron-left"></i>
                         </button>
-                        
                         <div class="carousel-track-container">
                             <div class="carousel-track">
-                                <!-- Slide 1 -->
                                 <div class="carousel-slide active">
                                     <img src="carousels/carousel1.webp" alt="Modern Residential Exterior">
-                                    <div class="slide-caption">
-                                        <h3>Modern Residential Masterpiece</h3>
-                                    </div>
+                                    <div class="slide-caption"><h3>Modern Residential Masterpiece</h3></div>
                                 </div>
-                                <!-- Slide 2 -->
                                 <div class="carousel-slide">
                                     <img src="carousels/carousel2.webp" alt="Contemporary Villa Design">
-                                    <div class="slide-caption">
-                                        <h3>Contemporary Villa Design</h3>
-                                    </div>
+                                    <div class="slide-caption"><h3>Contemporary Villa Design</h3></div>
                                 </div>
-                                <!-- Slide 3 -->
                                 <div class="carousel-slide">
                                     <img src="carousels/carousel3.webp" alt="Luxury High-Rise Entrance">
-                                    <div class="slide-caption">
-                                        <h3>Luxury High-Rise Entrance</h3>
-                                    </div>
+                                    <div class="slide-caption"><h3>Luxury High-Rise Entrance</h3></div>
                                 </div>
-                                <!-- Slide 4 -->
                                 <div class="carousel-slide">
                                     <img src="carousels/carousel4.webp" alt="Premium Commercial Development">
-                                    <div class="slide-caption">
-                                        <h3>Premium Commercial Plaza</h3>
-                                    </div>
+                                    <div class="slide-caption"><h3>Premium Commercial Plaza</h3></div>
                                 </div>
-                                <!-- Slide 5 -->
                                 <div class="carousel-slide">
                                     <img src="carousels/carousel5.webp" alt="Exquisite Interior Concepts">
-                                    <div class="slide-caption">
-                                        <h3>Exquisite Interior Styling</h3>
-                                    </div>
+                                    <div class="slide-caption"><h3>Exquisite Interior Styling</h3></div>
                                 </div>
                             </div>
                         </div>
-                        
                         <button class="carousel-btn next-btn" aria-label="Next Slide">
                             <i class="fas fa-chevron-right"></i>
                         </button>
                     </div>
-                    
-                    <!-- Indicators -->
                     <div class="carousel-indicators">
                         <span class="indicator-dot active" data-slide="0"></span>
                         <span class="indicator-dot" data-slide="1"></span>
@@ -159,22 +247,22 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Statistics Row (Moved below the grid) -->
+
+            <!-- Stats Row -->
             <div class="about-stats-row">
-                <div class="stat">
+                <div class="stat reveal">
                     <h3 class="stat-number" data-target="150">0</h3>
                     <p class="stat-label">Projects Completed</p>
                 </div>
-                <div class="stat">
+                <div class="stat reveal">
                     <h3 class="stat-number" data-target="500">0</h3>
                     <p class="stat-label">Happy Clients</p>
                 </div>
-                <div class="stat">
+                <div class="stat reveal">
                     <h3 class="stat-number" data-target="15">0</h3>
                     <p class="stat-label">Years Experience</p>
                 </div>
-                <div class="stat">
+                <div class="stat reveal">
                     <h3 class="stat-number" data-target="100">0</h3>
                     <p class="stat-label">Team Members</p>
                 </div>
@@ -182,53 +270,42 @@
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- ── SERVICES SECTION ── -->
     <section class="services" id="services">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">What We Do</span>
                 <h2 class="section-title">Our Services</h2>
-                <div class="section-divider"></div>
+                <div class="section-divider"><div class="section-divider-gem"></div></div>
             </div>
             <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fas fa-home"></i></div>
                     <h3>Residential Construction</h3>
                     <p>Building dream homes with modern designs, premium materials, and attention to every detail for comfortable living.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-city"></i>
-                    </div>
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fas fa-city"></i></div>
                     <h3>Commercial Projects</h3>
                     <p>Creating state-of-the-art commercial spaces that enhance business operations and reflect corporate excellence.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-gem"></i>
-                    </div>
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fas fa-gem"></i></div>
                     <h3>Luxury Infrastructure</h3>
                     <p>Delivering premium luxury developments with world-class amenities and sophisticated architectural designs.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-drafting-compass"></i>
-                    </div>
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fas fa-drafting-compass"></i></div>
                     <h3>Architectural Design</h3>
                     <p>Innovative architectural solutions that blend aesthetics with functionality for stunning results.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3>Renovation & Remodeling</h3>
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Renovation &amp; Remodeling</h3>
                     <p>Transforming existing spaces into modern, functional environments while preserving character.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-key"></i>
-                    </div>
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fas fa-key"></i></div>
                     <h3>Real Estate Development</h3>
                     <p>Comprehensive development services from land acquisition to project completion and handover.</p>
                 </div>
@@ -236,17 +313,29 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- ── PROJECTS SECTION ── -->
     <section class="projects" id="projects">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">Portfolio</span>
                 <h2 class="section-title">Featured Projects</h2>
-                <div class="section-divider"></div>
+                <div class="section-divider"><div class="section-divider-gem"></div></div>
             </div>
+
+            <!-- Project Filters -->
+            <div class="project-filters" role="group" aria-label="Filter projects">
+                <button class="filter-btn active" data-filter="all" id="filterAll">All</button>
+                <button class="filter-btn" data-filter="interior" id="filterInterior">Interior</button>
+                <button class="filter-btn" data-filter="luxury" id="filterLuxury">Luxury</button>
+                <button class="filter-btn" data-filter="residential" id="filterResidential">Residential</button>
+                <button class="filter-btn" data-filter="infrastructure" id="filterInfrastructure">Infrastructure</button>
+            </div>
+
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card reveal" data-category="interior">
                     <div class="project-image">
                         <img src="images/F1.webp" alt="Elite Bedroom Interior">
+                        <div class="project-overlay"><p class="project-overlay-text">Custom bedroom interior with designer wood paneling and ambient LED lighting.</p></div>
                     </div>
                     <div class="project-info">
                         <h3>Elite Bedroom Interior</h3>
@@ -254,9 +343,10 @@
                         <span class="project-tag">Interior</span>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card reveal" data-category="interior">
                     <div class="project-image">
                         <img src="images/F2.webp" alt="Luxury Lounge & TV Unit">
+                        <div class="project-overlay"><p class="project-overlay-text">Premium living and dining space featuring marble floors and a backlit TV console.</p></div>
                     </div>
                     <div class="project-info">
                         <h3>Luxury Living Lounge</h3>
@@ -264,9 +354,10 @@
                         <span class="project-tag">Interior</span>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card reveal" data-category="luxury">
                     <div class="project-image">
                         <img src="images/F3.webp" alt="Grand Master Suite">
+                        <div class="project-overlay"><p class="project-overlay-text">Elegant master bedroom showcasing geometric false ceiling architecture and marble tiling.</p></div>
                     </div>
                     <div class="project-info">
                         <h3>Grand Master Suite</h3>
@@ -274,19 +365,21 @@
                         <span class="project-tag">Luxury</span>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card reveal" data-category="luxury">
                     <div class="project-image">
                         <img src="images/F4.webp" alt="Star Ceiling Design">
+                        <div class="project-overlay"><p class="project-overlay-text">Sophisticated star-pattern false ceiling with integrated warm LED light channels.</p></div>
                     </div>
                     <div class="project-info">
                         <h3>Star Ceiling Design</h3>
                         <p>Sophisticated star-pattern false ceiling with integrated warm LED light channels.</p>
-                        <span class="project-tag">Design</span>
+                        <span class="project-tag">Luxury</span>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card reveal" data-category="residential">
                     <div class="project-image">
                         <img src="images/F5.webp" alt="Blue Haven Residency">
+                        <div class="project-overlay"><p class="project-overlay-text">Premium multi-story residential building with neoclassical columns and glass balconies.</p></div>
                     </div>
                     <div class="project-info">
                         <h3>Blue Haven Residency</h3>
@@ -294,9 +387,10 @@
                         <span class="project-tag">Residential</span>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card reveal" data-category="infrastructure">
                     <div class="project-image">
                         <img src="images/F6.webp" alt="Tirupati Heights Apartment">
+                        <div class="project-overlay"><p class="project-overlay-text">Modern multi-family apartment building with secure gated access and premium facade detailing.</p></div>
                     </div>
                     <div class="project-info">
                         <h3>Tirupati Heights</h3>
@@ -308,40 +402,219 @@
         </div>
     </section>
 
+    <!-- ── 3D SCROLL GALLERY ── -->
+    <section class="gallery-3d" id="gallery">
+        <!-- Ambient orbs -->
+        <div class="gallery-3d-orb gallery-3d-orb-1"></div>
+        <div class="gallery-3d-orb gallery-3d-orb-2"></div>
 
-    <!-- CTA Banner -->
-    <section class="cta-banner">
         <div class="container">
-            <div class="cta-content">
-                <h2>Ready to build something remarkable?</h2>
-                <p>Get a free consultation and design walkthrough with our expert team.</p>
-                <a href="#contact" class="btn btn-primary">Book Consultation</a>
+            <div class="section-header reveal" style="margin-bottom:60px;">
+                <span class="section-eyebrow">Our Work</span>
+                <h2 class="section-title">Crafted With Depth</h2>
+                <div class="section-divider"><div class="section-divider-gem"></div></div>
+                <p style="color:var(--text-secondary);margin-top:16px;font-size:0.95rem;letter-spacing:0.5px;">Scroll to experience our projects in cinematic 3D</p>
+            </div>
+        </div>
+
+        <!-- 3D Viewport -->
+        <div class="gallery-3d-viewport">
+            <div class="gallery-3d-stack" id="gallery3dStack">
+
+                <!-- Row 1 — foreground / hero slides -->
+                <div class="g3d-row" data-depth="0.08" data-tilt-x="4" data-tilt-z="0">
+                    <div class="g3d-card size-sm">
+                        <img src="images/slide1.webp" alt="Pawan Builders Project">
+                        <div class="g3d-caption">
+                            <h4>Tirupati Skyline</h4><span>Residential</span>
+                        </div>
+                    </div>
+                    <div class="g3d-card size-xl">
+                        <img src="images/slide2.webp" alt="Pawan Builders Project">
+                        <div class="g3d-caption">
+                            <h4>Grand Living Space</h4><span>Luxury</span>
+                        </div>
+                    </div>
+                    <div class="g3d-card size-md">
+                        <img src="images/slide3.webp" alt="Pawan Builders Project">
+                        <div class="g3d-caption">
+                            <h4>Modern Elevation</h4><span>Architecture</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 2 — midground / carousel images -->
+                <div class="g3d-row" data-depth="0.14" data-tilt-x="6" data-tilt-z="0">
+                    <div class="g3d-card size-md">
+                        <img src="carousels/carousel1.webp" alt="Pawan Builders Project">
+                        <div class="g3d-caption">
+                            <h4>Residential Masterpiece</h4><span>Exterior</span>
+                        </div>
+                    </div>
+                    <div class="g3d-card size-tall">
+                        <img src="carousels/carousel4.webp" alt="Pawan Builders Project">
+                        <div class="g3d-caption">
+                            <h4>Commercial Plaza</h4><span>Infrastructure</span>
+                        </div>
+                    </div>
+                    <div class="g3d-card size-lg">
+                        <img src="carousels/carousel2.webp" alt="Pawan Builders Project">
+                        <div class="g3d-caption">
+                            <h4>Contemporary Villa</h4><span>Luxury</span>
+                        </div>
+                    </div>
+                    <div class="g3d-card size-sm">
+                        <img src="carousels/carousel3.webp" alt="Pawan Builders Project">
+                        <div class="g3d-caption">
+                            <h4>High-Rise Entrance</h4><span>Premium</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 3 — background / F-series interiors -->
+                <div class="g3d-row" data-depth="0.20" data-tilt-x="8" data-tilt-z="0">
+                    <div class="g3d-card size-lg">
+                        <img src="images/F1.webp" alt="Elite Bedroom Interior">
+                        <div class="g3d-caption">
+                            <h4>Elite Bedroom</h4><span>Interior</span>
+                        </div>
+                    </div>
+                    <div class="g3d-card size-md">
+                        <img src="images/F2.webp" alt="Luxury Lounge">
+                        <div class="g3d-caption">
+                            <h4>Luxury Lounge</h4><span>Interior</span>
+                        </div>
+                    </div>
+                    <div class="g3d-card size-lg">
+                        <img src="images/F3.webp" alt="Master Suite">
+                        <div class="g3d-caption">
+                            <h4>Master Suite</h4><span>Luxury</span>
+                        </div>
+                    </div>
+                    <div class="g3d-card size-md">
+                        <img src="images/F4.webp" alt="Star Ceiling Design">
+                        <div class="g3d-caption">
+                            <h4>Star Ceiling</h4><span>Signature</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 4 — deep background / exterior + remaining -->
+                <div class="g3d-row" data-depth="0.28" data-tilt-x="10" data-tilt-z="0">
+                    <div class="g3d-card size-sm">
+                        <img src="images/slide4.webp" alt="Pawan Builders Project">
+                        <div class="g3d-caption">
+                            <h4>Luxury Facade</h4><span>Residential</span>
+                        </div>
+                    </div>
+                    <div class="g3d-card size-xl">
+                        <img src="images/F5.webp" alt="Blue Haven Residency">
+                        <div class="g3d-caption">
+                            <h4>Blue Haven Residency</h4><span>Residential</span>
+                        </div>
+                    </div>
+                    <div class="g3d-card size-md">
+                        <img src="images/F6.webp" alt="Tirupati Heights">
+                        <div class="g3d-caption">
+                            <h4>Tirupati Heights</h4><span>Infrastructure</span>
+                        </div>
+                    </div>
+                    <div class="g3d-card size-sm">
+                        <img src="carousels/carousel5.webp" alt="Interior Styling">
+                        <div class="g3d-caption">
+                            <h4>Interior Styling</h4><span>Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 5 — deepest / remaining slides -->
+                <div class="g3d-row" data-depth="0.36" data-tilt-x="12" data-tilt-z="0">
+                    <div class="g3d-card size-md">
+                        <img src="images/slide5.webp" alt="Pawan Builders Project">
+                        <div class="g3d-caption">
+                            <h4>Premium Exterior</h4><span>Architecture</span>
+                        </div>
+                    </div>
+                    <div class="g3d-card size-lg">
+                        <img src="images/slide6.webp" alt="Pawan Builders Project">
+                        <div class="g3d-caption">
+                            <h4>Urban Landmark</h4><span>Commercial</span>
+                        </div>
+                    </div>
+                    <div class="g3d-card size-md">
+                        <img src="images/slide3.webp" alt="Pawan Builders Project">
+                        <div class="g3d-caption">
+                            <h4>Elegant Forms</h4><span>Design</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
+    <!-- ── CTA BANNER ── -->
+    <section class="cta-banner">
+        <div class="container">
+            <div class="cta-content reveal">
+                <div>
+                    <h2>Ready to build something remarkable?</h2>
+                    <p>Get a free consultation and design walkthrough with our expert team.</p>
+                </div>
+                <a href="#contact" class="btn btn-primary" id="ctaBookConsultation">Book Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── TESTIMONIALS SECTION ── -->
     <section class="testimonials" id="testimonials">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">Client Stories</span>
                 <h2 class="section-title">What Our Clients Say</h2>
-                <div class="section-divider"></div>
+                <div class="section-divider"><div class="section-divider-gem"></div></div>
             </div>
-            <div class="testimonials-slider">
+            <div class="testimonials-slider" id="testimonialsSlider">
                 <div class="testimonial active">
-                    <p class="quote">"Pawan Builders and Developers turned our dream home into reality. Exceptional quality and attention to detail."</p>
-                    <div class="client">— S. Reddy, Homeowner</div>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="quote">"Pawan Builders and Developers turned our dream home into reality. Exceptional quality and attention to detail that truly sets them apart from everyone else in Tirupati."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SR</div>
+                        <div>
+                            <div class="author-name">S. Reddy</div>
+                            <div class="author-role">Homeowner, Tirupati</div>
+                        </div>
+                    </div>
                 </div>
                 <div class="testimonial">
-                    <p class="quote">"Professional team, timely delivery and excellent communication throughout the project."</p>
-                    <div class="client">— A. Kumar, Commercial Client</div>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="quote">"Professional team, timely delivery, and excellent communication throughout the project. Our commercial space was delivered exactly on time and exceeds all expectations."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AK</div>
+                        <div>
+                            <div class="author-name">A. Kumar</div>
+                            <div class="author-role">Commercial Client, Chittoor</div>
+                        </div>
+                    </div>
                 </div>
                 <div class="testimonial">
-                    <p class="quote">"Their design sensibilities and project management are top-notch. Highly recommended."</p>
-                    <div class="client">— M. Sharma, Investor</div>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="quote">"Their design sensibilities and project management are top-notch. Investing in their luxury project was one of the best decisions I've made. Highly recommended."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MS</div>
+                        <div>
+                            <div class="author-name">M. Sharma</div>
+                            <div class="author-role">Real Estate Investor</div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- Testimonial Dots -->
             <div class="testimonial-dots">
                 <span class="testimonial-dot active" data-index="0"></span>
                 <span class="testimonial-dot" data-index="1"></span>
@@ -350,57 +623,60 @@
         </div>
     </section>
 
-    <!-- Our Process / Timeline -->
+    <!-- ── PROCESS / TIMELINE ── -->
     <section class="process" id="process">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">How We Work</span>
                 <h2 class="section-title">Our Process</h2>
-                <div class="section-divider"></div>
+                <div class="section-divider"><div class="section-divider-gem"></div></div>
             </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="step">1</div>
+            <div class="timeline" id="processTimeline">
+                <div class="timeline-progress" id="timelineProgress"></div>
+                <div class="timeline-item reveal">
+                    <div class="step-wrapper"><div class="step">1</div></div>
                     <h4>Consultation</h4>
-                    <p>Free initial consultation and site visit to understand your needs.</p>
+                    <p>Free initial consultation and site visit to understand your vision and needs.</p>
                 </div>
-                <div class="timeline-item">
-                    <div class="step">2</div>
-                    <h4>Design & Planning</h4>
-                    <p>Architectural design, 3D renders and cost estimation.</p>
+                <div class="timeline-item reveal">
+                    <div class="step-wrapper"><div class="step">2</div></div>
+                    <h4>Design &amp; Planning</h4>
+                    <p>Architectural design, 3D renders, and detailed cost estimation.</p>
                 </div>
-                <div class="timeline-item">
-                    <div class="step">3</div>
+                <div class="timeline-item reveal">
+                    <div class="step-wrapper"><div class="step">3</div></div>
                     <h4>Construction</h4>
-                    <p>Quality-focused construction with weekly progress updates.</p>
+                    <p>Quality-focused construction with weekly progress updates and transparency.</p>
                 </div>
-                <div class="timeline-item">
-                    <div class="step">4</div>
+                <div class="timeline-item reveal">
+                    <div class="step-wrapper"><div class="step">4</div></div>
                     <h4>Handover</h4>
-                    <p>Final inspection, handover and aftercare support.</p>
+                    <p>Final inspection, handover ceremony, and ongoing aftercare support.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Team Section -->
+    <!-- ── TEAM SECTION ── -->
     <section class="team" id="team">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">Leadership</span>
                 <h2 class="section-title">Meet Our Founder</h2>
-                <div class="section-divider"></div>
+                <div class="section-divider"><div class="section-divider-gem"></div></div>
             </div>
             <div class="team-grid">
-                <div class="founder-card">
+                <div class="founder-card reveal">
                     <div class="founder-image-wrapper">
-                        <img src="images/Team.webp" alt="Mr. Pawan">
+                        <img src="images/Team.webp" alt="Mr. Pawan — Founder & CEO">
                     </div>
                     <div class="founder-info">
                         <h4>Mr. Pawan</h4>
-                        <p class="role">Founder & CEO</p>
-                        <p class="bio">With over 15 years of industry-leading experience, Mr. Pawan has guided Pawan Builders and Developers to become Tirupati's most trusted name in premium real estate, residential masterpieces, and commercial development.</p>
+                        <span class="role">Founder &amp; CEO</span>
+                        <p class="bio">With over 15 years of industry-leading experience, Mr. Pawan has guided Pawan Builders and Developers to become Tirupati's most trusted name in premium real estate, residential masterpieces, and commercial development. His vision for quality and innovation drives every project.</p>
                         <div class="founder-social">
                             <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://wa.me/919966100241" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://wa.me/919966100241" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                             <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
@@ -409,17 +685,18 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- ── CONTACT SECTION ── -->
     <section class="contact" id="contact">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">Get In Touch</span>
                 <h2 class="section-title">Contact Us</h2>
-                <div class="section-divider"></div>
+                <div class="section-divider"><div class="section-divider-gem"></div></div>
             </div>
             <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Pawan Builders and Developers</h3>
-                    <p>Ready to build your dream project? Contact us today for a consultation.</p>
+                <div class="contact-info reveal-left">
+                    <h3>Pawan Builders &amp; Developers</h3>
+                    <p>Ready to build your dream project? Contact us today for a free consultation with our expert team.</p>
                     <div class="contact-details">
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
@@ -439,52 +716,52 @@
                             <i class="fas fa-envelope"></i>
                             <div>
                                 <h4>Email</h4>
-                                <p><a href="mailto:Contact@pawanbuilders.com">Contact@pawanbuilders.com</a></p>
+                                <p><a href="mailto:info@pawanbuilders.com">info@pawanbuilders.com</a></p>
                             </div>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-globe"></i>
                             <div>
                                 <h4>Website</h4>
-                                <p><a href="https://www.pawanbuilders.com" target="_blank">www.pawanbuilders.com</a></p>
+                                <p><a href="https://pawanbuilders.com" target="_blank" rel="noopener noreferrer">pawanbuilders.com</a></p>
                             </div>
                         </div>
                     </div>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <form id="contactForm">
+                <div class="contact-form reveal-right">
+                    <form id="contactForm" novalidate>
                         <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
+                            <input type="text" id="contactName" name="name" placeholder="Your Full Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
+                            <input type="email" id="contactEmail" name="email" placeholder="Your Email Address" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" placeholder="Your Phone">
+                            <input type="tel" id="contactPhone" name="phone" placeholder="Your Phone Number">
                         </div>
                         <div class="form-group">
-                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                            <textarea id="contactMessage" name="message" placeholder="Tell us about your project..." rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <button type="submit" class="btn btn-primary" id="submitContactForm">Send Message</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ── FOOTER ── -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
                     <img src="images/Logo.webp" alt="Pawan Builders and Developers Logo" class="footer-logo">
-                    <p>Building world-class developments with durability, elegance, and customer satisfaction.</p>
+                    <p>Building world-class developments with durability, elegance, and customer satisfaction across Tirupati, Andhra Pradesh.</p>
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
@@ -499,52 +776,54 @@
                 <div class="footer-links">
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="#">Residential Construction</a></li>
-                        <li><a href="#">Commercial Projects</a></li>
-                        <li><a href="#">Luxury Infrastructure</a></li>
-                        <li><a href="#">Architectural Design</a></li>
-                        <li><a href="#">Renovation</a></li>
+                        <li><a href="#services">Residential Construction</a></li>
+                        <li><a href="#services">Commercial Projects</a></li>
+                        <li><a href="#services">Luxury Infrastructure</a></li>
+                        <li><a href="#services">Architectural Design</a></li>
+                        <li><a href="#services">Renovation</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <h4>Working Hours</h4>
                     <ul>
-                        <li>Monday - Friday: 9:00 AM - 6:00 PM</li>
-                        <li>Saturday: 9:00 AM - 2:00 PM</li>
+                        <li>Monday – Friday: 9:00 AM – 6:00 PM</li>
+                        <li>Saturday: 9:00 AM – 2:00 PM</li>
                         <li>Sunday: Closed</li>
                     </ul>
                 </div>
                 <div class="footer-map">
                     <h4>Our Location</h4>
                     <div class="map-container">
-                        <iframe 
-                            src="https://www.google.com/maps?q=H.no%207-220%2F3%20Subbiah%20Colony%2C%20Avilala%2C%20Tirupati%2C%20517507&output=embed" 
-                            width="100%" 
-                            height="100%" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
+                        <iframe
+                            src="https://www.google.com/maps?q=H.no%207-220%2F3%20Subbiah%20Colony%2C%20Avilala%2C%20Tirupati%2C%20517507&output=embed"
+                            width="100%"
+                            height="100%"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Pawan Builders Location">
                         </iframe>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Pawan Builders and Developers. All Rights Reserved.</p>
+                <p>&copy; 2026 Pawan Builders &amp; Developers. All Rights Reserved.</p>
+                <p>Crafted with <i class="fas fa-heart" style="color: var(--accent-1);"></i> in Tirupati</p>
             </div>
         </div>
     </footer>
 
-    <!-- Floating 3D Building Hologram -->
+    <!-- ── FLOATING 3D BUILDING HOLOGRAM ── -->
     <div class="floating-3d-card">
         <div class="floating-3d-container">
             <div class="floating-grid-base"></div>
             <div class="floating-laser-line"></div>
-            <model-viewer 
+            <model-viewer
                 class="floating-3d-model"
-                src="asia_building.glb" 
-                alt="3D Asia Building Model" 
-                auto-rotate 
+                src="asia_building.glb"
+                alt="3D Asia Building Model"
+                auto-rotate
                 rotation-interval="2000"
                 interaction-prompt="none"
                 disable-zoom
