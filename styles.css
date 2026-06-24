@@ -2285,7 +2285,7 @@ section { padding: 120px 0; }
     .logo { height: 36px; width: 36px; }
     .nav-brand { gap: 8px; }
     .brand-text {
-        font-size: 0.95rem;
+        font-size: 1.15rem;
         font-weight: 800;
         letter-spacing: 0px;
         background: linear-gradient(135deg, #ffffff 0%, var(--accent-2) 60%, var(--accent-1) 100%);
@@ -2312,7 +2312,7 @@ section { padding: 120px 0; }
     .logo { height: 30px; width: 30px; }
     .nav-brand { gap: 7px; }
     .brand-text {
-        font-size: 0.82rem;
+        font-size: 1.0rem;
         font-weight: 800;
         white-space: nowrap;
         letter-spacing: 0px;
