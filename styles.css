@@ -334,6 +334,8 @@ a { text-decoration: none; }
     align-items: center;
     gap: 14px;
     flex-shrink: 0;
+    min-width: 0;
+    white-space: nowrap;
 }
 
 .logo {
@@ -2278,19 +2280,47 @@ section { padding: 120px 0; }
     .footer-content { grid-template-columns: 1fr; }
     .hero-buttons { flex-direction: column; align-items: center; }
     .btn { width: 100%; max-width: 320px; text-align: center; }
-    .brand-text { font-size: 1.1rem; }
+
+    /* ── Mobile navbar brand fix ── */
+    .logo { height: 36px; width: 36px; }
+    .nav-brand { gap: 8px; }
+    .brand-text {
+        font-size: 0.95rem;
+        font-weight: 800;
+        letter-spacing: 0px;
+        background: linear-gradient(135deg, #ffffff 0%, var(--accent-2) 60%, var(--accent-1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        white-space: nowrap;
+    }
 }
 
 @media (max-width: 480px) {
     section { padding: 72px 0; }
     .container { padding: 0 16px; }
     .navbar { padding: 12px 0; }
+    .navbar .container { padding: 0 14px; }
     .about-stats-row { grid-template-columns: 1fr; }
     .contact-form { padding: 28px 20px; }
     .service-card { padding: 36px 24px; }
     .cta-content h2 { font-size: 1.7rem; }
     .theme-panel { right: 10px; }
     .footer-map .map-container { height: 200px; }
+
+    /* ── Extra-small screens: keep brand name fully visible ── */
+    .logo { height: 30px; width: 30px; }
+    .nav-brand { gap: 7px; }
+    .brand-text {
+        font-size: 0.82rem;
+        font-weight: 800;
+        white-space: nowrap;
+        letter-spacing: 0px;
+        /* Pure white on tiny screens — always legible */
+        background: none;
+        -webkit-text-fill-color: #f1f5f9;
+        color: #f1f5f9;
+    }
 }
 
 /* ═══════════════════════════════════════════════════════════
