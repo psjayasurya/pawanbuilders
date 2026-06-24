@@ -339,7 +339,7 @@ a { text-decoration: none; }
 }
 
 .logo {
-    height: 48px;
+    height: 58px;
     width: 48px;
     border-radius: 50%;
     object-fit: cover;
@@ -2284,8 +2284,9 @@ section { padding: 120px 0; }
     /* ── Mobile navbar brand fix ── */
     .logo { height: 36px; width: 36px; }
     .nav-brand { gap: 8px; }
+    .nav-right { gap: 12px; }
     .brand-text {
-        font-size: 1.15rem;
+        font-size: 1.8rem;
         font-weight: 800;
         letter-spacing: 0px;
         background: linear-gradient(135deg, #ffffff 0%, var(--accent-2) 60%, var(--accent-1) 100%);
@@ -2309,10 +2310,10 @@ section { padding: 120px 0; }
     .footer-map .map-container { height: 200px; }
 
     /* ── Extra-small screens: keep brand name fully visible ── */
-    .logo { height: 30px; width: 30px; }
-    .nav-brand { gap: 7px; }
+    .logo { height: 50px; width: 50px; }
+    .nav-brand { gap: 6px; }
     .brand-text {
-        font-size: 1.0rem;
+        font-size: 2.3rem;
         font-weight: 800;
         white-space: nowrap;
         letter-spacing: 0px;
