@@ -340,7 +340,7 @@ a { text-decoration: none; }
 
 .logo {
     height: 58px;
-    width: 48px;
+    width: 58px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid var(--accent-1);
@@ -355,8 +355,8 @@ a { text-decoration: none; }
 
 .brand-text {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.4rem;
-    font-weight: 700;
+    font-size: 2.6rem;
+    font-weight: 800;
     letter-spacing: 0.5px;
     background: var(--grad-accent);
     -webkit-background-clip: text;
@@ -416,6 +416,11 @@ a { text-decoration: none; }
 
 .nav-menu a.active {
     color: var(--accent-2);
+}
+
+/* Mobile-only Theme Toggle */
+.mobile-only-theme {
+    display: none !important;
 }
 
 /* Theme Switcher Toggle Button */
@@ -2264,6 +2269,42 @@ section { padding: 120px 0; }
     section { padding: 90px 0; }
 
     .cta-content { flex-direction: column; text-align: center; }
+
+    .theme-toggle-btn {
+        display: none !important;
+    }
+
+    .mobile-only-theme {
+        display: block !important;
+        margin-top: 24px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .mobile-theme-toggle {
+        background: var(--accent-subtle);
+        border: 1px solid var(--border);
+        color: var(--accent-1);
+        padding: 12px 24px;
+        border-radius: 12px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .mobile-theme-toggle:hover,
+    .mobile-theme-toggle:active {
+        border-color: var(--border-hover);
+        box-shadow: 0 0 15px var(--accent-glow);
+        transform: scale(1.03);
+    }
 }
 
 @media (max-width: 768px) {
@@ -2310,7 +2351,7 @@ section { padding: 120px 0; }
     .footer-map .map-container { height: 200px; }
 
     /* ── Extra-small screens: keep brand name fully visible ── */
-    .logo { height: 50px; width: 50px; }
+    .logo { height: 55px; width: 55px; }
     .nav-brand { gap: 6px; }
     .brand-text {
         font-size: 2.3rem;

@@ -35,15 +35,23 @@ function loadSavedTheme() {
 
 // Theme Panel Toggle
 const themeToggleBtn = document.getElementById('themeToggleBtn');
+const themeToggleBtnMobile = document.getElementById('themeToggleBtnMobile');
 const themePanel = document.getElementById('themePanel');
 
-themeToggleBtn.addEventListener('click', (e) => {
+const toggleThemePanel = (e) => {
     e.stopPropagation();
     themePanel.classList.toggle('open');
-});
+};
+
+if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', toggleThemePanel);
+}
+if (themeToggleBtnMobile) {
+    themeToggleBtnMobile.addEventListener('click', toggleThemePanel);
+}
 
 document.addEventListener('click', (e) => {
-    if (!themePanel.contains(e.target) && e.target !== themeToggleBtn) {
+    if (!themePanel.contains(e.target) && e.target !== themeToggleBtn && e.target !== themeToggleBtnMobile) {
         themePanel.classList.remove('open');
     }
 });
@@ -51,12 +59,27 @@ document.addEventListener('click', (e) => {
 document.querySelectorAll('.theme-option').forEach(opt => {
     opt.addEventListener('click', () => {
         setTheme(opt.getAttribute('data-theme'));
+        // If on mobile, close the hamburger menu and the theme panel when a theme is selected
+        if (window.innerWidth <= 968) {
+            const mMenu = document.getElementById('navMenu');
+            const mHam = document.getElementById('hamburger');
+            if (mMenu) mMenu.classList.remove('active');
+            if (mHam) mHam.classList.remove('active');
+            themePanel.classList.remove('open');
+        }
     });
 
     opt.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
             setTheme(opt.getAttribute('data-theme'));
+            if (window.innerWidth <= 968) {
+                const mMenu = document.getElementById('navMenu');
+                const mHam = document.getElementById('hamburger');
+                if (mMenu) mMenu.classList.remove('active');
+                if (mHam) mHam.classList.remove('active');
+                themePanel.classList.remove('open');
+            }
         }
     });
 });
