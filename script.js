@@ -603,20 +603,57 @@ if (contactForm) {
         e.preventDefault();
         const name = document.getElementById('contactName').value.trim();
         const email = document.getElementById('contactEmail').value.trim();
+        const phone = document.getElementById('contactPhone').value.trim();
         const message = document.getElementById('contactMessage').value.trim();
 
         if (name && email && message) {
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Message Sent ✓';
-            submitBtn.style.opacity = '0.8';
+            
+            // UI state: Sending
+            submitBtn.textContent = 'Sending...';
+            submitBtn.style.opacity = '0.6';
             submitBtn.disabled = true;
-            contactForm.reset();
-            setTimeout(() => {
-                submitBtn.textContent = originalText;
+
+            // Submit form to FormSubmit AJAX endpoint
+            fetch("https://formsubmit.co/ajax/info@pawanbuilders.com", {
+                method: "POST",
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    Name: name,
+                    Email: email,
+                    Phone: phone,
+                    Message: message,
+                    _subject: `New Contact Form Submission from ${name} (pawanbuilders.com)`
+                })
+            })
+            .then(response => {
+                if (response.ok) {
+                    submitBtn.textContent = 'Message Sent ✓';
+                    submitBtn.style.opacity = '0.8';
+                    contactForm.reset();
+                    setTimeout(() => {
+                        submitBtn.textContent = originalText;
+                        submitBtn.style.opacity = '';
+                        submitBtn.disabled = false;
+                    }, 3000);
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            })
+            .catch(error => {
+                console.error('Submission error:', error);
+                submitBtn.textContent = 'Failed to Send ✗';
                 submitBtn.style.opacity = '';
                 submitBtn.disabled = false;
-            }, 3000);
+                alert('An error occurred while sending your message. Please try again or email us directly at info@pawanbuilders.com.');
+                setTimeout(() => {
+                    submitBtn.textContent = originalText;
+                }, 3000);
+            });
         } else {
             // Shake animation on invalid
             contactForm.style.animation = 'none';
