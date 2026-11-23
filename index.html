@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="classic-navy">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pawan Builders & Developers | Premium Real Estate in Tirupati</title>
-    <meta name="description" content="Pawan Builders & Developers — Tirupati's most trusted premium real estate and construction company. Residential, commercial, and luxury infrastructure projects built with excellence.">
-    <meta name="keywords" content="Pawan Builders, Tirupati real estate, construction Tirupati, luxury apartments, premium homes Andhra Pradesh">
+    <meta name="description"
+        content="Pawan Builders & Developers — Tirupati's most trusted premium real estate and construction company. Residential, commercial, and luxury infrastructure projects built with excellence.">
+    <meta name="keywords"
+        content="Pawan Builders, Tirupati real estate, construction Tirupati, luxury apartments, premium homes Andhra Pradesh">
     <meta property="og:title" content="Pawan Builders & Developers | Premium Real Estate in Tirupati">
     <meta property="og:description" content="Building dreams, crafting excellence — premium real estate in Tirupati.">
     <meta property="og:type" content="website">
@@ -13,7 +16,9 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -24,6 +29,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
     <!-- ── SCROLL PROGRESS BAR ── -->
@@ -52,16 +58,25 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#brochure">Brochure</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li class="mobile-only-theme">
-                        <button class="mobile-theme-toggle" id="themeToggleBtnMobile" title="Change Theme" aria-label="Change color theme">
+                        <button class="mobile-theme-toggle" id="themeToggleBtnMobile" title="Change Theme"
+                            aria-label="Change color theme">
                             <i class="fas fa-palette"></i> Choose Theme
                         </button>
                     </li>
                 </ul>
 
+                <!-- Brochure Quick CTA Button (Opens in page) -->
+                <button type="button" class="nav-brochure-pill" id="navBrochurePill" title="View Project Brochure">
+                    <i class="fas fa-file-pdf"></i>
+                    <span>Brochure</span>
+                </button>
+
                 <!-- Theme Toggle Button -->
-                <button class="theme-toggle-btn" id="themeToggleBtn" title="Change Theme" aria-label="Change color theme">
+                <button class="theme-toggle-btn" id="themeToggleBtn" title="Change Theme"
+                    aria-label="Change color theme">
                     <i class="fas fa-palette"></i>
                 </button>
 
@@ -78,27 +93,33 @@
     <div class="theme-panel" id="themePanel" role="dialog" aria-label="Theme Selector">
         <p class="theme-panel-title">Choose Theme</p>
         <div class="theme-options">
-            <div class="theme-option active" data-theme="classic-navy" id="theme-classic-navy" role="button" tabindex="0" aria-label="Classic Navy theme">
+            <div class="theme-option active" data-theme="classic-navy" id="theme-classic-navy" role="button"
+                tabindex="0" aria-label="Classic Navy theme">
                 <span class="theme-swatch"></span>
                 <span class="theme-option-name">Classic Navy</span>
             </div>
-            <div class="theme-option" data-theme="obsidian-gold" id="theme-obsidian-gold" role="button" tabindex="0" aria-label="Obsidian Gold theme">
+            <div class="theme-option" data-theme="obsidian-gold" id="theme-obsidian-gold" role="button" tabindex="0"
+                aria-label="Obsidian Gold theme">
                 <span class="theme-swatch"></span>
                 <span class="theme-option-name">Obsidian Gold</span>
             </div>
-            <div class="theme-option" data-theme="royal-sapphire" id="theme-royal-sapphire" role="button" tabindex="0" aria-label="Royal Sapphire theme">
+            <div class="theme-option" data-theme="royal-sapphire" id="theme-royal-sapphire" role="button" tabindex="0"
+                aria-label="Royal Sapphire theme">
                 <span class="theme-swatch"></span>
                 <span class="theme-option-name">Royal Sapphire</span>
             </div>
-            <div class="theme-option" data-theme="emerald-elite" id="theme-emerald-elite" role="button" tabindex="0" aria-label="Emerald Elite theme">
+            <div class="theme-option" data-theme="emerald-elite" id="theme-emerald-elite" role="button" tabindex="0"
+                aria-label="Emerald Elite theme">
                 <span class="theme-swatch"></span>
                 <span class="theme-option-name">Emerald Elite</span>
             </div>
-            <div class="theme-option" data-theme="crimson-empire" id="theme-crimson-empire" role="button" tabindex="0" aria-label="Crimson Empire theme">
+            <div class="theme-option" data-theme="crimson-empire" id="theme-crimson-empire" role="button" tabindex="0"
+                aria-label="Crimson Empire theme">
                 <span class="theme-swatch"></span>
                 <span class="theme-option-name">Crimson Empire</span>
             </div>
-            <div class="theme-option" data-theme="midnight-violet" id="theme-midnight-violet" role="button" tabindex="0" aria-label="Midnight Violet theme">
+            <div class="theme-option" data-theme="midnight-violet" id="theme-midnight-violet" role="button" tabindex="0"
+                aria-label="Midnight Violet theme">
                 <span class="theme-swatch"></span>
                 <span class="theme-option-name">Midnight Violet</span>
             </div>
@@ -134,6 +155,9 @@
             <p class="hero-subtitle">Premium Real Estate &amp; Construction in Tirupati, Andhra Pradesh</p>
             <div class="hero-buttons">
                 <a href="#projects" class="btn btn-primary" id="heroViewProjects">View Projects</a>
+                <button type="button" class="btn btn-secondary hero-brochure-btn" id="heroDownloadBrochure">
+                    <i class="fas fa-file-pdf" style="color: #ef4444; margin-right: 6px;"></i> E-Brochure
+                </button>
                 <a href="#contact" class="btn btn-secondary" id="heroGetInTouch">Get In Touch</a>
             </div>
         </div>
@@ -156,21 +180,21 @@
     <!-- ── AWARDS TICKER ── -->
     <div class="awards-ticker" aria-hidden="true">
         <div class="ticker-track" id="tickerTrack">
-            
+
             <div class="ticker-item"><i class="fas fa-star"></i> 500+ Happy Families</div>
-            
+
             <div class="ticker-item"><i class="fas fa-medal"></i> 15+ Years of Excellence</div>
             <div class="ticker-item"><i class="fas fa-building"></i> 150+ Projects Delivered</div>
-            
+
             <div class="ticker-item"><i class="fas fa-gem"></i> Luxury Living Redefined</div>
             <div class="ticker-item"><i class="fas fa-award"></i> Quality &amp; Innovation</div>
             <!-- Duplicate for seamless loop -->
-            
+
             <div class="ticker-item"><i class="fas fa-star"></i> 500+ Happy Families</div>
-            
+
             <div class="ticker-item"><i class="fas fa-medal"></i> 15+ Years of Excellence</div>
             <div class="ticker-item"><i class="fas fa-building"></i> 150+ Projects Delivered</div>
-            
+
             <div class="ticker-item"><i class="fas fa-gem"></i> Luxury Living Redefined</div>
             <div class="ticker-item"><i class="fas fa-award"></i> Quality &amp; Innovation</div>
         </div>
@@ -182,13 +206,19 @@
             <div class="section-header reveal">
                 <span class="section-eyebrow">Our Story</span>
                 <h2 class="section-title">About Pawan Builders</h2>
-                <div class="section-divider"><div class="section-divider-gem"></div></div>
+                <div class="section-divider">
+                    <div class="section-divider-gem"></div>
+                </div>
             </div>
             <div class="about-content">
                 <div class="about-text reveal-left">
                     <h3>Pawan Builders &amp; Developers</h3>
-                    <p>A premium real estate and construction company based in Tirupati, Andhra Pradesh. We specialize in residential, commercial, and luxury infrastructure projects with a focus on quality, innovation, trust, and modern architecture.</p>
-                    <p>Our mission is to build world-class developments that combine durability, elegance, and customer satisfaction. Every project we undertake reflects our commitment to excellence and our passion for creating spaces that inspire.</p>
+                    <p>A premium real estate and construction company based in Tirupati, Andhra Pradesh. We specialize
+                        in residential, commercial, and luxury infrastructure projects with a focus on quality,
+                        innovation, trust, and modern architecture.</p>
+                    <p>Our mission is to build world-class developments that combine durability, elegance, and customer
+                        satisfaction. Every project we undertake reflects our commitment to excellence and our passion
+                        for creating spaces that inspire.</p>
                     <div class="about-features">
                         <div class="feature">
                             <i class="fas fa-award"></i>
@@ -219,23 +249,33 @@
                             <div class="carousel-track">
                                 <div class="carousel-slide active">
                                     <img src="carousels/carousel1.webp" alt="Modern Residential Exterior">
-                                    <div class="slide-caption"><h3>Modern Residential Masterpiece</h3></div>
+                                    <div class="slide-caption">
+                                        <h3>Modern Residential Masterpiece</h3>
+                                    </div>
                                 </div>
                                 <div class="carousel-slide">
                                     <img src="carousels/carousel2.webp" alt="Contemporary Villa Design">
-                                    <div class="slide-caption"><h3>Contemporary Villa Design</h3></div>
+                                    <div class="slide-caption">
+                                        <h3>Contemporary Villa Design</h3>
+                                    </div>
                                 </div>
                                 <div class="carousel-slide">
                                     <img src="carousels/carousel3.webp" alt="Luxury High-Rise Entrance">
-                                    <div class="slide-caption"><h3>Luxury High-Rise Entrance</h3></div>
+                                    <div class="slide-caption">
+                                        <h3>Luxury High-Rise Entrance</h3>
+                                    </div>
                                 </div>
                                 <div class="carousel-slide">
                                     <img src="carousels/carousel4.webp" alt="Premium Commercial Development">
-                                    <div class="slide-caption"><h3>Premium Commercial Plaza</h3></div>
+                                    <div class="slide-caption">
+                                        <h3>Premium Commercial Plaza</h3>
+                                    </div>
                                 </div>
                                 <div class="carousel-slide">
                                     <img src="carousels/carousel5.webp" alt="Exquisite Interior Concepts">
-                                    <div class="slide-caption"><h3>Exquisite Interior Styling</h3></div>
+                                    <div class="slide-caption">
+                                        <h3>Exquisite Interior Styling</h3>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -281,28 +321,34 @@
             <div class="section-header reveal">
                 <span class="section-eyebrow">What We Do</span>
                 <h2 class="section-title">Our Services</h2>
-                <div class="section-divider"><div class="section-divider-gem"></div></div>
+                <div class="section-divider">
+                    <div class="section-divider-gem"></div>
+                </div>
             </div>
             <div class="services-grid">
                 <div class="service-card reveal">
                     <div class="service-icon"><i class="fas fa-home"></i></div>
                     <h3>Residential Construction</h3>
-                    <p>Building dream homes with modern designs, premium materials, and attention to every detail for comfortable living.</p>
+                    <p>Building dream homes with modern designs, premium materials, and attention to every detail for
+                        comfortable living.</p>
                 </div>
                 <div class="service-card reveal">
                     <div class="service-icon"><i class="fas fa-city"></i></div>
                     <h3>Commercial Projects</h3>
-                    <p>Creating state-of-the-art commercial spaces that enhance business operations and reflect corporate excellence.</p>
+                    <p>Creating state-of-the-art commercial spaces that enhance business operations and reflect
+                        corporate excellence.</p>
                 </div>
                 <div class="service-card reveal">
                     <div class="service-icon"><i class="fas fa-gem"></i></div>
                     <h3>Luxury Infrastructure</h3>
-                    <p>Delivering premium luxury developments with world-class amenities and sophisticated architectural designs.</p>
+                    <p>Delivering premium luxury developments with world-class amenities and sophisticated architectural
+                        designs.</p>
                 </div>
                 <div class="service-card reveal">
                     <div class="service-icon"><i class="fas fa-drafting-compass"></i></div>
                     <h3>Architectural Design</h3>
-                    <p>Innovative architectural solutions that blend aesthetics with functionality for stunning results.</p>
+                    <p>Innovative architectural solutions that blend aesthetics with functionality for stunning results.
+                    </p>
                 </div>
                 <div class="service-card reveal">
                     <div class="service-icon"><i class="fas fa-tools"></i></div>
@@ -324,7 +370,9 @@
             <div class="section-header reveal">
                 <span class="section-eyebrow">Portfolio</span>
                 <h2 class="section-title">Featured Projects</h2>
-                <div class="section-divider"><div class="section-divider-gem"></div></div>
+                <div class="section-divider">
+                    <div class="section-divider-gem"></div>
+                </div>
             </div>
 
             <!-- Project Filters -->
@@ -333,14 +381,44 @@
                 <button class="filter-btn" data-filter="interior" id="filterInterior">Interior</button>
                 <button class="filter-btn" data-filter="luxury" id="filterLuxury">Luxury</button>
                 <button class="filter-btn" data-filter="residential" id="filterResidential">Residential</button>
-                <button class="filter-btn" data-filter="infrastructure" id="filterInfrastructure">Infrastructure</button>
+                <button class="filter-btn" data-filter="infrastructure"
+                    id="filterInfrastructure">Infrastructure</button>
             </div>
 
             <div class="projects-grid">
+                <div class="project-card reveal" data-category="residential">
+                    <div class="project-image">
+                        <img src="images/mithila-enclave-elevation.jpg" alt="Mithila Enclave — 2 BHK Luxury Apartments">
+                        <div class="project-overlay">
+                            <p class="project-overlay-text">TUDA Approved 2 BHK Luxury Apartments in Naidupeta, Tirupati
+                                District. 1,163 – 1,263 Sq.Ft. with lift, generator backup &amp; CCTV.</p>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-card-header">
+                            <h3>Mithila Enclave</h3>
+                            <span class="project-tag">Residential</span>
+                        </div>
+                        <p>TUDA Approved 2 BHK Luxury Apartments with 100% Vastu design, automatic lift &amp; full
+                            generator backup.</p>
+                        <div class="project-card-footer">
+                            <button type="button" class="project-pdf-link" id="projectBrochureLink"
+                                title="View Brochure in Page">
+                                <i class="fas fa-file-pdf"></i> Brochure (PDF)
+                            </button>
+                            <a href="#brochure" class="project-details-link">
+                                Floor Plans <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 <div class="project-card reveal" data-category="interior">
                     <div class="project-image">
                         <img src="images/F1.webp" alt="Elite Bedroom Interior">
-                        <div class="project-overlay"><p class="project-overlay-text">Custom bedroom interior with designer wood paneling and ambient LED lighting.</p></div>
+                        <div class="project-overlay">
+                            <p class="project-overlay-text">Custom bedroom interior with designer wood paneling and
+                                ambient LED lighting.</p>
+                        </div>
                     </div>
                     <div class="project-info">
                         <h3>Elite Bedroom Interior</h3>
@@ -351,7 +429,10 @@
                 <div class="project-card reveal" data-category="interior">
                     <div class="project-image">
                         <img src="images/F2.webp" alt="Luxury Lounge & TV Unit">
-                        <div class="project-overlay"><p class="project-overlay-text">Premium living and dining space featuring marble floors and a backlit TV console.</p></div>
+                        <div class="project-overlay">
+                            <p class="project-overlay-text">Premium living and dining space featuring marble floors and
+                                a backlit TV console.</p>
+                        </div>
                     </div>
                     <div class="project-info">
                         <h3>Luxury Living Lounge</h3>
@@ -362,7 +443,10 @@
                 <div class="project-card reveal" data-category="luxury">
                     <div class="project-image">
                         <img src="images/F3.webp" alt="Grand Master Suite">
-                        <div class="project-overlay"><p class="project-overlay-text">Elegant master bedroom showcasing geometric false ceiling architecture and marble tiling.</p></div>
+                        <div class="project-overlay">
+                            <p class="project-overlay-text">Elegant master bedroom showcasing geometric false ceiling
+                                architecture and marble tiling.</p>
+                        </div>
                     </div>
                     <div class="project-info">
                         <h3>Grand Master Suite</h3>
@@ -373,7 +457,10 @@
                 <div class="project-card reveal" data-category="luxury">
                     <div class="project-image">
                         <img src="images/F4.webp" alt="Star Ceiling Design">
-                        <div class="project-overlay"><p class="project-overlay-text">Sophisticated star-pattern false ceiling with integrated warm LED light channels.</p></div>
+                        <div class="project-overlay">
+                            <p class="project-overlay-text">Sophisticated star-pattern false ceiling with integrated
+                                warm LED light channels.</p>
+                        </div>
                     </div>
                     <div class="project-info">
                         <h3>Star Ceiling Design</h3>
@@ -384,7 +471,10 @@
                 <div class="project-card reveal" data-category="residential">
                     <div class="project-image">
                         <img src="images/F5.webp" alt="Blue Haven Residency">
-                        <div class="project-overlay"><p class="project-overlay-text">Premium multi-story residential building with neoclassical columns and glass balconies.</p></div>
+                        <div class="project-overlay">
+                            <p class="project-overlay-text">Premium multi-story residential building with neoclassical
+                                columns and glass balconies.</p>
+                        </div>
                     </div>
                     <div class="project-info">
                         <h3>Blue Haven Residency</h3>
@@ -395,12 +485,167 @@
                 <div class="project-card reveal" data-category="infrastructure">
                     <div class="project-image">
                         <img src="images/F6.webp" alt="Tirupati Heights Apartment">
-                        <div class="project-overlay"><p class="project-overlay-text">Modern multi-family apartment building with secure gated access and premium facade detailing.</p></div>
+                        <div class="project-overlay">
+                            <p class="project-overlay-text">Modern multi-family apartment building with secure gated
+                                access and premium facade detailing.</p>
+                        </div>
                     </div>
                     <div class="project-info">
                         <h3>Tirupati Heights</h3>
-                        <p>Modern multi-family apartment building with secure gated access and premium facade detailing.</p>
+                        <p>Modern multi-family apartment building with secure gated access and premium facade detailing.
+                        </p>
                         <span class="project-tag">Infrastructure</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── PROJECT BROCHURE & SHOWCASE ── -->
+    <section class="brochure-section" id="brochure">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">Official E-Brochure</span>
+                <h2 class="section-title">Project Brochure &amp; Master Plan</h2>
+                <div class="section-divider">
+                    <div class="section-divider-gem"></div>
+                </div>
+                <p class="section-subtitle">Download our comprehensive brochure for Mithila Enclave — featuring verified
+                    floor plans, elevation renders, and technical specifications.</p>
+            </div>
+
+            <div class="brochure-card reveal">
+                <div class="brochure-grid">
+                    <!-- Left: Interactive Page Preview -->
+                    <div class="brochure-preview-col">
+                        <div class="brochure-viewer-box" id="brochureViewerBox">
+                            <div class="brochure-badge-tuda">
+                                <i class="fas fa-shield-alt"></i> TUDA Approved
+                            </div>
+                            <div class="brochure-image-wrap" id="brochureImageWrap" role="button" tabindex="0"
+                                title="Click to open interactive fullscreen viewer"
+                                aria-label="Open interactive brochure viewer">
+                                <img src="images/mithila-enclave-elevation.jpg"
+                                    alt="Mithila Enclave Brochure - Project Elevation & Highlights" id="brochureMainImg"
+                                    class="brochure-main-img">
+                                <div class="brochure-zoom-overlay">
+                                    <i class="fas fa-search-plus"></i>
+                                    <span>Click to Preview Fullscreen</span>
+                                </div>
+                            </div>
+                            <div class="brochure-page-meta">
+                                <span class="brochure-page-title" id="brochurePageTitle">Elevation &amp; Project
+                                    Highlights</span>
+                                <span class="brochure-page-counter" id="brochurePageCounter">Page 2 of 4</span>
+                            </div>
+                        </div>
+
+                        <!-- Page Selector Tabs -->
+                        <div class="brochure-tabs" role="tablist" aria-label="Brochure Pages">
+                            <button type="button" class="brochure-tab" data-page="1"
+                                data-img="images/mithila-enclave-cover.jpg" data-title="Mithila Enclave Cover Page"
+                                aria-label="Page 1: Cover">
+                                <i class="fas fa-book-open"></i>
+                                <span>Cover</span>
+                            </button>
+                            <button type="button" class="brochure-tab active" data-page="2"
+                                data-img="images/mithila-enclave-elevation.jpg"
+                                data-title="Elevation &amp; Project Highlights" aria-label="Page 2: Elevation">
+                                <i class="fas fa-building"></i>
+                                <span>Elevation</span>
+                            </button>
+                            <button type="button" class="brochure-tab" data-page="3"
+                                data-img="images/mithila-enclave-floorplan.jpg"
+                                data-title="Typical Floor Plan (1,163 &amp; 1,263 Sq.Ft.)"
+                                aria-label="Page 3: Floor Plan">
+                                <i class="fas fa-vector-square"></i>
+                                <span>Floor Plan</span>
+                            </button>
+                            <button type="button" class="brochure-tab" data-page="4"
+                                data-img="images/mithila-enclave-location.jpg" data-title="Location Map &amp; Routing"
+                                aria-label="Page 4: Location">
+                                <i class="fas fa-map-marked-alt"></i>
+                                <span>Location</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Right: Project Information & Download CTA -->
+                    <div class="brochure-info-col">
+                        <div class="brochure-header-info">
+                            <span class="brochure-brand-tag"><i class="fas fa-award"></i> Pawan Builders &amp;
+                                Developers Flagship</span>
+                            <h3 class="brochure-project-name">Mithila Enclave</h3>
+                            <p class="brochure-tagline">"Architecture that elevates life to new heights"</p>
+                            <p class="brochure-description">
+                                A prestigious residential development offering meticulously crafted 2 BHK luxury
+                                apartments designed for comfort, structural durability, and contemporary elegance in
+                                Naidupeta, Tirupati District.
+                            </p>
+                        </div>
+
+                        <!-- Highlights list -->
+                        <div class="brochure-specs-grid">
+                            <div class="spec-card">
+                                <div class="spec-icon"><i class="fas fa-ruler-combined"></i></div>
+                                <div>
+                                    <h4>Configurations</h4>
+                                    <p>North: 1,163 Sq.Ft. | East: 1,263 Sq.Ft.</p>
+                                </div>
+                            </div>
+                            <div class="spec-card">
+                                <div class="spec-icon"><i class="fas fa-compass"></i></div>
+                                <div>
+                                    <h4>Vastu Compliant</h4>
+                                    <p>100% Vastu designed floor layouts</p>
+                                </div>
+                            </div>
+                            <div class="spec-card">
+                                <div class="spec-icon"><i class="fas fa-bolt"></i></div>
+                                <div>
+                                    <h4>Power &amp; Elevator</h4>
+                                    <p>Generator backup &amp; 6-passenger lift</p>
+                                </div>
+                            </div>
+                            <div class="spec-card">
+                                <div class="spec-icon"><i class="fas fa-map-pin"></i></div>
+                                <div>
+                                    <h4>Prime Location</h4>
+                                    <p>Naidupeta, APIIC Menakuru SEZ Road</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Document Download Box -->
+                        <div class="brochure-download-box">
+                            <div class="download-box-top">
+                                <div class="pdf-icon-badge">
+                                    <i class="fas fa-file-pdf"></i>
+                                </div>
+                                <div class="pdf-file-details">
+                                    <span class="pdf-file-name">PawanBuildersprojects.pdf</span>
+                                    <span class="pdf-file-info">Official Project Brochure • PDF Format • 737 KB</span>
+                                </div>
+                            </div>
+
+                            <div class="brochure-action-btns">
+                                <a href="PawanBuildersprojects.pdf" download="PawanBuilders-MithilaEnclave-Brochure.pdf"
+                                    class="btn btn-primary brochure-download-action" id="downloadBrochureBtn">
+                                    <i class="fas fa-download"></i>
+                                    <span>Download Brochure</span>
+                                </a>
+                                <button type="button" class="btn btn-secondary brochure-view-action"
+                                    id="viewBrochureBtn">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>Read Full PDF</span>
+                                </button>
+                                <button type="button" class="btn btn-secondary brochure-interactive-btn"
+                                    id="openBrochureModalBtn">
+                                    <i class="fas fa-expand-arrows-alt"></i>
+                                    <span>Interactive Viewer</span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -417,8 +662,11 @@
             <div class="section-header reveal" style="margin-bottom:60px;">
                 <span class="section-eyebrow">Our Work</span>
                 <h2 class="section-title">Crafted With Depth</h2>
-                <div class="section-divider"><div class="section-divider-gem"></div></div>
-                <p style="color:var(--text-secondary);margin-top:16px;font-size:0.95rem;letter-spacing:0.5px;">Scroll to experience our projects in cinematic 3D</p>
+                <div class="section-divider">
+                    <div class="section-divider-gem"></div>
+                </div>
+                <p style="color:var(--text-secondary);margin-top:16px;font-size:0.95rem;letter-spacing:0.5px;">Scroll to
+                    experience our projects in cinematic 3D</p>
             </div>
         </div>
 
@@ -564,9 +812,15 @@
             <div class="cta-content reveal">
                 <div>
                     <h2>Ready to build something remarkable?</h2>
-                    <p>Get a free consultation and design walkthrough with our expert team.</p>
+                    <p>Get a free consultation, design walkthrough, and our complete project brochure.</p>
                 </div>
-                <a href="#contact" class="btn btn-primary" id="ctaBookConsultation">Book Consultation</a>
+                <div class="cta-buttons-wrap" style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;">
+                    <a href="PawanBuildersprojects.pdf" download="PawanBuilders-MithilaEnclave-Brochure.pdf"
+                        class="btn btn-secondary" id="ctaDownloadBrochure">
+                        <i class="fas fa-file-pdf" style="margin-right:8px;color:#ef4444;"></i> Download Brochure
+                    </a>
+                    <a href="#contact" class="btn btn-primary" id="ctaBookConsultation">Book Consultation</a>
+                </div>
             </div>
         </div>
     </section>
@@ -577,14 +831,18 @@
             <div class="section-header reveal">
                 <span class="section-eyebrow">Client Stories</span>
                 <h2 class="section-title">What Our Clients Say</h2>
-                <div class="section-divider"><div class="section-divider-gem"></div></div>
+                <div class="section-divider">
+                    <div class="section-divider-gem"></div>
+                </div>
             </div>
             <div class="testimonials-slider" id="testimonialsSlider">
                 <div class="testimonial active">
                     <div class="testimonial-stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="quote">"Pawan Builders and Developers turned our dream home into reality. Exceptional quality and attention to detail that truly sets them apart from everyone else in Tirupati."</p>
+                    <p class="quote">"Pawan Builders and Developers turned our dream home into reality. Exceptional
+                        quality and attention to detail that truly sets them apart from everyone else in Tirupati."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">SR</div>
                         <div>
@@ -595,9 +853,11 @@
                 </div>
                 <div class="testimonial">
                     <div class="testimonial-stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="quote">"Professional team, timely delivery, and excellent communication throughout the project. Our commercial space was delivered exactly on time and exceeds all expectations."</p>
+                    <p class="quote">"Professional team, timely delivery, and excellent communication throughout the
+                        project. Our commercial space was delivered exactly on time and exceeds all expectations."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">AK</div>
                         <div>
@@ -608,9 +868,11 @@
                 </div>
                 <div class="testimonial">
                     <div class="testimonial-stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                     </div>
-                    <p class="quote">"Their design sensibilities and project management are top-notch. Investing in their luxury project was one of the best decisions I've made. Highly recommended."</p>
+                    <p class="quote">"Their design sensibilities and project management are top-notch. Investing in
+                        their luxury project was one of the best decisions I've made. Highly recommended."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">MS</div>
                         <div>
@@ -634,27 +896,37 @@
             <div class="section-header reveal">
                 <span class="section-eyebrow">How We Work</span>
                 <h2 class="section-title">Our Process</h2>
-                <div class="section-divider"><div class="section-divider-gem"></div></div>
+                <div class="section-divider">
+                    <div class="section-divider-gem"></div>
+                </div>
             </div>
             <div class="timeline" id="processTimeline">
                 <div class="timeline-progress" id="timelineProgress"></div>
                 <div class="timeline-item reveal">
-                    <div class="step-wrapper"><div class="step">1</div></div>
+                    <div class="step-wrapper">
+                        <div class="step">1</div>
+                    </div>
                     <h4>Consultation</h4>
                     <p>Free initial consultation and site visit to understand your vision and needs.</p>
                 </div>
                 <div class="timeline-item reveal">
-                    <div class="step-wrapper"><div class="step">2</div></div>
+                    <div class="step-wrapper">
+                        <div class="step">2</div>
+                    </div>
                     <h4>Design &amp; Planning</h4>
                     <p>Architectural design, 3D renders, and detailed cost estimation.</p>
                 </div>
                 <div class="timeline-item reveal">
-                    <div class="step-wrapper"><div class="step">3</div></div>
+                    <div class="step-wrapper">
+                        <div class="step">3</div>
+                    </div>
                     <h4>Construction</h4>
                     <p>Quality-focused construction with weekly progress updates and transparency.</p>
                 </div>
                 <div class="timeline-item reveal">
-                    <div class="step-wrapper"><div class="step">4</div></div>
+                    <div class="step-wrapper">
+                        <div class="step">4</div>
+                    </div>
                     <h4>Handover</h4>
                     <p>Final inspection, handover ceremony, and ongoing aftercare support.</p>
                 </div>
@@ -668,7 +940,9 @@
             <div class="section-header reveal">
                 <span class="section-eyebrow">Leadership</span>
                 <h2 class="section-title">Meet Our Founder</h2>
-                <div class="section-divider"><div class="section-divider-gem"></div></div>
+                <div class="section-divider">
+                    <div class="section-divider-gem"></div>
+                </div>
             </div>
             <div class="team-grid">
                 <div class="founder-card reveal">
@@ -678,10 +952,14 @@
                     <div class="founder-info">
                         <h4>Mr. Pawan</h4>
                         <span class="role">Founder &amp; CEO</span>
-                        <p class="bio">With over 15 years of industry-leading experience, Mr. Pawan has guided Pawan Builders and Developers to become Tirupati's most trusted name in premium real estate, residential masterpieces, and commercial development. His vision for quality and innovation drives every project.</p>
+                        <p class="bio">With over 15 years of industry-leading experience, Mr. Pawan has guided Pawan
+                            Builders and Developers to become Tirupati's most trusted name in premium real estate,
+                            residential masterpieces, and commercial development. His vision for quality and innovation
+                            drives every project.</p>
                         <div class="founder-social">
                             <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://wa.me/919966100241" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://wa.me/919966100241" target="_blank" rel="noopener noreferrer"
+                                aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                             <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
@@ -696,12 +974,15 @@
             <div class="section-header reveal">
                 <span class="section-eyebrow">Get In Touch</span>
                 <h2 class="section-title">Contact Us</h2>
-                <div class="section-divider"><div class="section-divider-gem"></div></div>
+                <div class="section-divider">
+                    <div class="section-divider-gem"></div>
+                </div>
             </div>
             <div class="contact-content">
                 <div class="contact-info reveal-left">
                     <h3>Pawan Builders &amp; Developers</h3>
-                    <p>Ready to build your dream project? Contact us today for a free consultation with our expert team.</p>
+                    <p>Ready to build your dream project? Contact us today for a free consultation with our expert team.
+                    </p>
                     <div class="contact-details">
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
@@ -728,7 +1009,8 @@
                             <i class="fas fa-globe"></i>
                             <div>
                                 <h4>Website</h4>
-                                <p><a href="https://pawanbuilders.com" target="_blank" rel="noopener noreferrer">pawanbuilders.com</a></p>
+                                <p><a href="https://pawanbuilders.com" target="_blank"
+                                        rel="noopener noreferrer">pawanbuilders.com</a></p>
                             </div>
                         </div>
                     </div>
@@ -745,13 +1027,15 @@
                             <input type="text" id="contactName" name="name" placeholder="Your Full Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" id="contactEmail" name="email" placeholder="Your Email Address" required>
+                            <input type="email" id="contactEmail" name="email" placeholder="Your Email Address"
+                                required>
                         </div>
                         <div class="form-group">
                             <input type="tel" id="contactPhone" name="phone" placeholder="Your Phone Number">
                         </div>
                         <div class="form-group">
-                            <textarea id="contactMessage" name="message" placeholder="Tell us about your project..." rows="5" required></textarea>
+                            <textarea id="contactMessage" name="message" placeholder="Tell us about your project..."
+                                rows="5" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary" id="submitContactForm">Send Message</button>
                     </form>
@@ -766,7 +1050,8 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <img src="images/Logo.webp" alt="Pawan Builders and Developers Logo" class="footer-logo">
-                    <p>Building world-class developments with durability, elegance, and customer satisfaction across Tirupati, Andhra Pradesh.</p>
+                    <p>Building world-class developments with durability, elegance, and customer satisfaction across
+                        Tirupati, Andhra Pradesh.</p>
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
@@ -775,6 +1060,10 @@
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#projects">Projects</a></li>
+                        <li><a href="#brochure">Mithila Enclave</a></li>
+                        href="#brochureModal" id="footerBrochureLink"><i class="fas fa-file-pdf"
+                            style="color:var(--accent-1); margin-right:5px;"></i>
+                        E-Brochure (PDF)</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -801,13 +1090,8 @@
                     <div class="map-container">
                         <iframe
                             src="https://www.google.com/maps?q=H.no%207-220%2F3%20Subbiah%20Colony%2C%20Avilala%2C%20Tirupati%2C%20517507&output=embed"
-                            width="100%"
-                            height="100%"
-                            style="border:0;"
-                            allowfullscreen=""
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"
-                            title="Pawan Builders Location">
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" title="Pawan Builders Location">
                         </iframe>
                     </div>
                 </div>
@@ -824,22 +1108,91 @@
         <div class="floating-3d-container">
             <div class="floating-grid-base"></div>
             <div class="floating-laser-line"></div>
-            <model-viewer
-                class="floating-3d-model"
-                src="asia_building.glb"
-                alt="3D Asia Building Model"
-                auto-rotate
-                rotation-interval="2000"
-                interaction-prompt="none"
-                disable-zoom
-                disable-pan
-                shadow-intensity="1"
-                camera-controls
-                touch-action="pan-y">
+            <model-viewer class="floating-3d-model" src="asia_building.glb" alt="3D Asia Building Model" auto-rotate
+                rotation-interval="2000" interaction-prompt="none" disable-zoom disable-pan shadow-intensity="1"
+                camera-controls touch-action="pan-y">
             </model-viewer>
         </div>
     </div>
 
+    <!-- ── BROCHURE INTERACTIVE LIGHTBOX MODAL ── -->
+    <div class="brochure-modal" id="brochureModal" role="dialog" aria-modal="true" aria-label="Project Brochure Viewer"
+        hidden>
+        <div class="brochure-modal-backdrop" id="brochureModalBackdrop"></div>
+        <div class="brochure-modal-dialog">
+            <div class="brochure-modal-header">
+                <div class="modal-title-wrap">
+                    <i class="fas fa-file-pdf modal-pdf-icon"></i>
+                    <div>
+                        <h3 class="brochure-modal-title">Mithila Enclave — Official Brochure</h3>
+                        <p class="brochure-modal-sub" id="modalPageTitle">Elevation &amp; Project Highlights</p>
+                    </div>
+                </div>
+                <div class="brochure-modal-header-actions">
+                    <!-- Viewing Mode Switcher -->
+                    <div class="modal-view-toggle" role="tablist" aria-label="Brochure view mode">
+                        <button type="button" class="modal-toggle-btn active" id="modalToggleSlides"
+                            title="High Definition Slides View">
+                            <i class="fas fa-layer-group"></i> <span>Slides</span>
+                        </button>
+                        <button type="button" class="modal-toggle-btn" id="modalTogglePdf"
+                            title="Interactive PDF Document View">
+                            <i class="fas fa-file-pdf"></i> <span>PDF Document</span>
+                        </button>
+                    </div>
+                    <a href="PawanBuildersprojects.pdf" download="PawanBuilders-MithilaEnclave-Brochure.pdf"
+                        class="modal-btn-download" title="Download PDF Brochure">
+                        <i class="fas fa-download"></i> <span>Download</span>
+                    </a>
+                    <button type="button" class="brochure-modal-close" id="brochureModalClose" aria-label="Close modal">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="brochure-modal-body">
+                <!-- Slides View Mode -->
+                <div class="brochure-modal-slides-wrap" id="modalSlidesWrap">
+                    <button type="button" class="modal-nav-arrow modal-prev-btn" id="modalPrevBtn"
+                        aria-label="Previous Page">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="brochure-modal-img-container">
+                        <img src="images/mithila-enclave-elevation.jpg" alt="Brochure Full Page View"
+                            id="modalBrochureImg" class="modal-brochure-img">
+                    </div>
+                    <button type="button" class="modal-nav-arrow modal-next-btn" id="modalNextBtn"
+                        aria-label="Next Page">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <!-- PDF Document View Mode -->
+                <div class="brochure-modal-pdf-wrap" id="modalPdfWrap" style="display:none;">
+                        <iframe src="" class="modal-pdf-iframe" id="modalPdfIframe"
+                        title="Pawan Builders Project Brochure PDF"></iframe>
+                </div>
+        </div><!-- /.brochure-modal-body -->
+
+        <div class="brochure-modal-footer" id="modalFooter">
+            <div class="modal-page-indicator">
+                <span id="modalPageCounter">Page 1 of 4</span>
+            </div>
+        <div class="modal-thumbnails" id="modalThumbnails">
+            <button type="button" class="modal-thumb active" data-page="1" title="Page 1: Cover"><img
+                    src="images/mithila-enclave-cover.jpg" alt="Cover"></button>
+            <button type="button" class="modal-thumb" data-page="2" title="Page 2: Elevation"><img
+                    src="images/mithila-enclave-elevation.jpg" alt="Elevation"></button>
+            <button type="button" class="modal-thumb" data-page="3" title="Page 3: Floor Plan"><img
+                    src="images/mithila-enclave-floorplan.jpg" alt="Floor Plan"></button>
+            <button type="button" class="modal-thumb" data-page="4" title="Page 4: Location Map"><img
+                    src="images/mithila-enclave-location.jpg" alt="Location Map"></button>
+        </div>
+    </div><!-- /.brochure-modal-footer -->
+    </div><!-- /.brochure-modal-dialog -->
+    </div><!-- /.brochure-modal -->
+
     <script src="script.js"></script>
 </body>
+
 </html>

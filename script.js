@@ -304,14 +304,14 @@ navMenu.querySelectorAll('a').forEach(link => {
 
 // Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
         if (href === '#') return;
         e.preventDefault();
         try {
             const target = document.querySelector(href);
             if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        } catch(err) {}
+        } catch (err) { }
     });
 });
 
@@ -609,7 +609,7 @@ if (contactForm) {
         if (name && email && message) {
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.textContent;
-            
+
             // UI state: Sending
             submitBtn.textContent = 'Sending...';
             submitBtn.style.opacity = '0.6';
@@ -618,7 +618,7 @@ if (contactForm) {
             // Submit form to FormSubmit AJAX endpoint
             fetch("https://formsubmit.co/ajax/info@pawanbuilders.com", {
                 method: "POST",
-                headers: { 
+                headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json'
                 },
@@ -630,30 +630,30 @@ if (contactForm) {
                     _subject: `New Contact Form Submission from ${name} (pawanbuilders.com)`
                 })
             })
-            .then(response => {
-                if (response.ok) {
-                    submitBtn.textContent = 'Message Sent ✓';
-                    submitBtn.style.opacity = '0.8';
-                    contactForm.reset();
+                .then(response => {
+                    if (response.ok) {
+                        submitBtn.textContent = 'Message Sent ✓';
+                        submitBtn.style.opacity = '0.8';
+                        contactForm.reset();
+                        setTimeout(() => {
+                            submitBtn.textContent = originalText;
+                            submitBtn.style.opacity = '';
+                            submitBtn.disabled = false;
+                        }, 3000);
+                    } else {
+                        throw new Error('Form submission failed');
+                    }
+                })
+                .catch(error => {
+                    console.error('Submission error:', error);
+                    submitBtn.textContent = 'Failed to Send ✗';
+                    submitBtn.style.opacity = '';
+                    submitBtn.disabled = false;
+                    alert('An error occurred while sending your message. Please try again or email us directly at info@pawanbuilders.com.');
                     setTimeout(() => {
                         submitBtn.textContent = originalText;
-                        submitBtn.style.opacity = '';
-                        submitBtn.disabled = false;
                     }, 3000);
-                } else {
-                    throw new Error('Form submission failed');
-                }
-            })
-            .catch(error => {
-                console.error('Submission error:', error);
-                submitBtn.textContent = 'Failed to Send ✗';
-                submitBtn.style.opacity = '';
-                submitBtn.disabled = false;
-                alert('An error occurred while sending your message. Please try again or email us directly at info@pawanbuilders.com.');
-                setTimeout(() => {
-                    submitBtn.textContent = originalText;
-                }, 3000);
-            });
+                });
         } else {
             // Shake animation on invalid
             contactForm.style.animation = 'none';
@@ -738,7 +738,7 @@ window.addEventListener('load', () => {
     'use strict';
 
     // ── Smooth scroll tracker ──────────────────────
-    let scrollY    = window.scrollY;
+    let scrollY = window.scrollY;
     let targetScrollY = window.scrollY;
     let rafId;
 
@@ -750,16 +750,16 @@ window.addEventListener('load', () => {
     window.addEventListener('scroll', onScroll, { passive: true });
 
     // ── Gallery rows ──────────────────────────────
-    const g3dRows    = Array.from(document.querySelectorAll('.g3d-row'));
-    const galleryEl  = document.getElementById('gallery3dStack');
-    let galleryTop   = 0;
-    let galleryH     = 0;
+    const g3dRows = Array.from(document.querySelectorAll('.g3d-row'));
+    const galleryEl = document.getElementById('gallery3dStack');
+    let galleryTop = 0;
+    let galleryH = 0;
 
     function cacheGalleryBounds() {
         if (!galleryEl) return;
         const rect = galleryEl.getBoundingClientRect();
         galleryTop = rect.top + window.scrollY;
-        galleryH   = galleryEl.offsetHeight;
+        galleryH = galleryEl.offsetHeight;
     }
 
     window.addEventListener('resize', cacheGalleryBounds);
@@ -779,7 +779,7 @@ window.addEventListener('load', () => {
     function cacheProjectRects() {
         projectCardData.forEach(d => {
             d.rect = d.el.getBoundingClientRect();
-            d.top  = d.rect.top + window.scrollY;
+            d.top = d.rect.top + window.scrollY;
         });
     }
     window.addEventListener('resize', cacheProjectRects);
@@ -792,12 +792,12 @@ window.addEventListener('load', () => {
     g3dCards.forEach(card => {
         card.addEventListener('mousemove', e => {
             const rect = card.getBoundingClientRect();
-            const cx   = rect.left + rect.width  / 2;
-            const cy   = rect.top  + rect.height / 2;
-            const dx   = (e.clientX - cx) / (rect.width  / 2);  // -1 to 1
-            const dy   = (e.clientY - cy) / (rect.height / 2);  // -1 to 1
+            const cx = rect.left + rect.width / 2;
+            const cy = rect.top + rect.height / 2;
+            const dx = (e.clientX - cx) / (rect.width / 2);  // -1 to 1
+            const dy = (e.clientY - cy) / (rect.height / 2);  // -1 to 1
             const rotX = dy * -12;   // tilt up/down
-            const rotY = dx *  14;   // tilt left/right
+            const rotY = dx * 14;   // tilt left/right
             card.style.transform = `perspective(700px) rotateX(${rotX}deg) rotateY(${rotY}deg) scale3d(1.04,1.04,1.04)`;
         });
 
@@ -810,7 +810,7 @@ window.addEventListener('load', () => {
     function tick() {
         scrollY = lerp(scrollY, targetScrollY, 0.08);
 
-        const vp  = window.innerHeight;
+        const vp = window.innerHeight;
 
         // 1. Hero parallax — slides drift at 35% scroll speed
         if (heroSlider) {
@@ -825,23 +825,23 @@ window.addEventListener('load', () => {
             const prog = Math.max(0, Math.min(1, galleryScrolled));
 
             g3dRows.forEach((row, i) => {
-                const depth   = parseFloat(row.dataset.depth  || '0.1');
-                const tiltX   = parseFloat(row.dataset.tiltX  || '5');
+                const depth = parseFloat(row.dataset.depth || '0.1');
+                const tiltX = parseFloat(row.dataset.tiltX || '5');
 
                 // Each row enters viewport at a staggered time
                 const rowProg = Math.max(0, Math.min(1, prog * 1.4 - i * 0.06));
 
                 // Z-translate: closer rows come forward more as you scroll
-                const zShift  = depth * (prog - 0.5) * 1800;
+                const zShift = depth * (prog - 0.5) * 1800;
 
                 // X-rotate: rows tilt forward then flatten as you scroll through
-                const xAngle  = tiltX * (1 - rowProg * 1.5);
+                const xAngle = tiltX * (1 - rowProg * 1.5);
 
                 // Slight Y-translate offset per depth layer
-                const yShift  = (1 - rowProg) * depth * 220;
+                const yShift = (1 - rowProg) * depth * 220;
 
                 // Alternate left/right lateral drift per row
-                const xShift  = (i % 2 === 0 ? 1 : -1) * depth * (1 - rowProg) * 60;
+                const xShift = (i % 2 === 0 ? 1 : -1) * depth * (1 - rowProg) * 60;
 
                 // Opacity: fade in from ghost
                 const opacity = 0.35 + rowProg * 0.65;
@@ -863,7 +863,7 @@ window.addEventListener('load', () => {
             const norm = Math.max(-1, Math.min(1, relY / (vp * 0.5)));
             // Gentle pitch + scale
             const rotX = norm * -6;
-            const sc   = 1 + Math.abs(norm) * 0.015;
+            const sc = 1 + Math.abs(norm) * 0.015;
             // Only apply tilt when not hovering (hover handles its own transform)
             if (!el.matches(':hover')) {
                 el.style.transform = `perspective(800px) rotateX(${rotX}deg) scale(${sc})`;
@@ -889,3 +889,235 @@ window.addEventListener('load', () => {
 
 // Run theme initialization
 loadSavedTheme();
+
+// ─────────────────────────────────────────
+// BROCHURE SHOWCASE & INTERACTIVE LIGHTBOX
+// ─────────────────────────────────────────
+(function initBrochureFeature() {
+    const BROCHURE_PAGES = [
+        { page: 1, title: 'Mithila Enclave Cover Page', img: 'images/mithila-enclave-cover.jpg', counter: 'Page 1 of 4' },
+        { page: 2, title: 'Elevation & Project Highlights', img: 'images/mithila-enclave-elevation.jpg', counter: 'Page 2 of 4' },
+        { page: 3, title: 'Typical Floor Plan (1,163 & 1,263 Sq.Ft.)', img: 'images/mithila-enclave-floorplan.jpg', counter: 'Page 3 of 4' },
+        { page: 4, title: 'Location Map & Routing', img: 'images/mithila-enclave-location.jpg', counter: 'Page 4 of 4' }
+    ];
+
+    let currentPageIdx = 1; // 0-indexed: default to page 2 (Elevation & Highlights)
+    let currentViewMode = 'slides'; // 'slides' or 'pdf'
+
+    // Inline Showcase Elements
+    const mainImg = document.getElementById('brochureMainImg');
+    const pageTitle = document.getElementById('brochurePageTitle');
+    const pageCounter = document.getElementById('brochurePageCounter');
+    const tabs = document.querySelectorAll('.brochure-tab');
+    const imageWrap = document.getElementById('brochureImageWrap');
+    const openModalBtn = document.getElementById('openBrochureModalBtn');
+    const viewBrochureBtn = document.getElementById('viewBrochureBtn');
+
+    // Page-wide In-Page Triggers
+    const navPill = document.getElementById('navBrochurePill');
+    const heroBrochure = document.getElementById('heroDownloadBrochure');
+    const projectBrochure = document.getElementById('projectBrochureLink');
+    const footerBrochure = document.getElementById('footerBrochureLink');
+
+    // Modal Elements
+    const modal = document.getElementById('brochureModal');
+    const modalBackdrop = document.getElementById('brochureModalBackdrop');
+    const modalClose = document.getElementById('brochureModalClose');
+    const modalImg = document.getElementById('modalBrochureImg');
+    const modalTitle = document.getElementById('modalPageTitle');
+    const modalCounter = document.getElementById('modalPageCounter');
+    const modalPrev = document.getElementById('modalPrevBtn');
+    const modalNext = document.getElementById('modalNextBtn');
+    const modalThumbs = document.querySelectorAll('.modal-thumb');
+
+    // Modal View Mode Elements
+    const modalSlidesWrap = document.getElementById('modalSlidesWrap');
+    const modalPdfWrap = document.getElementById('modalPdfWrap');
+    const modalPdfIframe = document.getElementById('modalPdfIframe');
+    const modalToggleSlides = document.getElementById('modalToggleSlides');
+    const modalTogglePdf = document.getElementById('modalTogglePdf');
+    const modalFooter = document.getElementById('modalFooter');
+
+    // Switch inline section page
+    function setInlinePage(idx) {
+        if (idx < 0 || idx >= BROCHURE_PAGES.length) return;
+        currentPageIdx = idx;
+        const page = BROCHURE_PAGES[idx];
+
+        if (mainImg) {
+            mainImg.style.opacity = '0.4';
+            setTimeout(() => {
+                mainImg.src = page.img;
+                mainImg.alt = `${page.title} - Pawan Builders Mithila Enclave`;
+                mainImg.style.opacity = '1';
+            }, 150);
+        }
+
+        if (pageTitle) pageTitle.textContent = page.title;
+        if (pageCounter) pageCounter.textContent = page.counter;
+
+        tabs.forEach((tab, i) => {
+            tab.classList.toggle('active', i === idx);
+        });
+    }
+
+    // Switch modal slide page
+    function setModalPage(idx) {
+        if (idx < 0 || idx >= BROCHURE_PAGES.length) return;
+        currentPageIdx = idx;
+        const page = BROCHURE_PAGES[idx];
+
+        if (modalImg) {
+            modalImg.style.opacity = '0.3';
+            modalImg.style.transform = 'scale(0.97)';
+            setTimeout(() => {
+                modalImg.src = page.img;
+                modalImg.alt = `${page.title} - Pawan Builders`;
+                modalImg.style.opacity = '1';
+                modalImg.style.transform = 'scale(1)';
+            }, 150);
+        }
+
+        if (modalTitle) modalTitle.textContent = page.title;
+        if (modalCounter) modalCounter.textContent = page.counter;
+
+        modalThumbs.forEach((thumb, i) => {
+            thumb.classList.toggle('active', i === idx);
+        });
+
+        // Sync inline showcase
+        setInlinePage(idx);
+    }
+
+    // Switch modal view mode ('slides' or 'pdf')
+    function setModalViewMode(mode) {
+        currentViewMode = mode;
+        if (mode === 'pdf') {
+            if (modalTogglePdf) modalTogglePdf.classList.add('active');
+            if (modalToggleSlides) modalToggleSlides.classList.remove('active');
+            if (modalSlidesWrap) modalSlidesWrap.style.display = 'none';
+            if (modalPdfWrap) modalPdfWrap.style.display = 'flex';
+            if (modalFooter) modalFooter.style.display = 'none';
+            if (modalTitle) modalTitle.textContent = 'Mithila Enclave — Official PDF Document';
+
+                // Lazy-load the PDF iframe only once (blank src="" resolves to page URL in browsers)
+                if (modalPdfIframe && !modalPdfIframe.dataset.loaded) {
+                    modalPdfIframe.src = 'PawanBuildersprojects.pdf#view=FitH';
+                    modalPdfIframe.dataset.loaded = '1';
+                }
+            } else {
+                if (modalToggleSlides) modalToggleSlides.classList.add('active');
+                if (modalTogglePdf) modalTogglePdf.classList.remove('active');
+                if (modalSlidesWrap) modalSlidesWrap.style.display = 'flex';
+                if (modalPdfWrap) modalPdfWrap.style.display = 'none';
+                if (modalFooter) modalFooter.style.display = 'flex';
+                setModalPage(currentPageIdx);
+            }
+        }
+
+        // Open Modal right on the page (no new tab)
+        function openModal(mode = 'slides') {
+            if (!modal) return;
+            setModalViewMode(mode);
+            modal.removeAttribute('hidden');
+            requestAnimationFrame(() => {
+                modal.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            });
+        }
+
+        // Close Modal
+        function closeModal() {
+            if (!modal) return;
+            modal.classList.remove('open');
+            setTimeout(() => {
+                modal.setAttribute('hidden', '');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        // Inline Tabs Click
+        tabs.forEach((tab, i) => {
+            tab.addEventListener('click', () => setInlinePage(i));
+        });
+
+        // View Mode Toggle Click Handlers
+        if (modalToggleSlides) {
+            modalToggleSlides.addEventListener('click', () => setModalViewMode('slides'));
+        }
+        if (modalTogglePdf) {
+            modalTogglePdf.addEventListener('click', () => setModalViewMode('pdf'));
+        }
+
+        // In-Page Brochure Triggers (all open in this page, not in a separate tab)
+        const inPageTriggers = [
+            { el: navPill, mode: 'slides' },
+            { el: heroBrochure, mode: 'slides' },
+            { el: projectBrochure, mode: 'slides' },
+            { el: imageWrap, mode: 'slides' },
+            { el: openModalBtn, mode: 'slides' },
+            { el: viewBrochureBtn, mode: 'pdf' },
+            { el: footerBrochure, mode: 'slides' }
+        ];
+
+        inPageTriggers.forEach(({ el, mode }) => {
+            if (el) {
+                el.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    openModal(mode);
+                });
+                // Handle keyboard activation on interactive elements
+                el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        openModal(mode);
+                    }
+                });
+            }
+        });
+
+        // Close Modal triggers
+        if (modalClose) modalClose.addEventListener('click', closeModal);
+        if (modalBackdrop) modalBackdrop.addEventListener('click', closeModal);
+
+        // Modal Nav Buttons (Slides mode)
+        if (modalPrev) {
+            modalPrev.addEventListener('click', () => {
+                const prevIdx = (currentPageIdx - 1 + BROCHURE_PAGES.length) % BROCHURE_PAGES.length;
+                setModalPage(prevIdx);
+            });
+        }
+
+        if (modalNext) {
+            modalNext.addEventListener('click', () => {
+                const nextIdx = (currentPageIdx + 1) % BROCHURE_PAGES.length;
+                setModalPage(nextIdx);
+            });
+        }
+
+        // Modal Thumbnails
+        modalThumbs.forEach((thumb, i) => {
+            thumb.addEventListener('click', () => setModalPage(i));
+        });
+
+        // Keyboard navigation for modal
+        document.addEventListener('keydown', (e) => {
+            if (!modal || modal.hasAttribute('hidden') || !modal.classList.contains('open')) return;
+            if (e.key === 'Escape') closeModal();
+            if (currentViewMode === 'slides') {
+                if (e.key === 'ArrowLeft') {
+                    const prevIdx = (currentPageIdx - 1 + BROCHURE_PAGES.length) % BROCHURE_PAGES.length;
+                    setModalPage(prevIdx);
+                }
+                if (e.key === 'ArrowRight') {
+                    const nextIdx = (currentPageIdx + 1) % BROCHURE_PAGES.length;
+                    setModalPage(nextIdx);
+                }
+            }
+        });
+
+        // Re-cache section offsets if the global function exists
+        if (typeof cacheSectionOffsets === 'function') {
+            setTimeout(cacheSectionOffsets, 300);
+        }
+    }) ();
